@@ -11,7 +11,9 @@ const navItems = [
 export default function Navbar() {
   return (
     <nav className="flex items-center container mx-auto w-full py-6 font-sora font-medium text-primary">
-      <h1 className="mr-auto text-lg">Orisabiyi Lab</h1>
+      <h1 className="mr-auto text-xl font-semibold">
+        <Link href='/'>Orisabiyi Lab</Link>
+      </h1>
 
       <ul className="flex items-center gap-10 text-base">
         {
