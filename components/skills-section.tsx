@@ -50,7 +50,7 @@ export default function SkillSection() {
       <ul className="grid grid-cols-5 gap-5 h-96 w-full">
         {
           skills.map(({ icon: Icon, name }) => (
-            <li key={name} className="w-full border-2 border-gray-500 flex flex-col items-center justify-center gap-2 hover:border-0 hover:bg-primary hover:text-white transition-colors delay-75">
+            <li key={name} className="w-full border-2 border-gray-400 flex flex-col items-center justify-center gap-2 text-primary hover:border-0 hover:bg-primary hover:text-white transition-colors delay-75">
               <Icon size={60} />
               <span className="text-2xl">{name}</span>
             </li>
