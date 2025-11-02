@@ -45,7 +45,7 @@ export default function ExperienceSection() {
       <ul className="container mx-auto flex flex-col gap-6">
         {
           experienceData.map(({ role, company, duration, description }, index) => (
-            <li key={index} className="border border-white/20 p-6 text-white">
+            <li key={index} className={`border border-white/20 p-6 text-white ${(index + 1) % 2 === 0 ? 'bg-black/50' : ''}`}>
               <div className="flex justify-between">
                 <h3 className="text-xl font-semibold">{role}</h3>
                 <p className="text-sm block">{duration}</p>
