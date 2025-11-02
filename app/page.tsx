@@ -1,3 +1,4 @@
+import AboutSection from "@/components/about-section";
 import ExperienceSection from "@/components/exprience-section";
 import Header from "@/components/header";
 import Navbar from "@/components/navbar";
@@ -10,6 +11,7 @@ export default function Page() {
       <Header />
       <SkillSection />
       <ExperienceSection />
+      <AboutSection />
     </>
   );
 }
