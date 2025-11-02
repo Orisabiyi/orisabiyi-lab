@@ -26,9 +26,9 @@ const socialIcons = [
 ]
 
 export default function Header() {
-  return <header className="flex h-[80vh] py-10 container mx-auto font-sora">
+  return <header className="flex h-[90vh] 2xl:h-[80vh] py-10 container mx-auto font-sora">
     <div className="w-[38%] self-end flex flex-col items-start gap-5">
-      <h2 className="text-4xl flex flex-col gap-4 w-full">
+      <h2 className="text-3xl 2xl:text-4xl flex flex-col gap-2 2xl:gap-4 w-full">
         <span className="font-semibold text-primary">
           Hello I&apos;m Orisabiyi David.
         </span>
