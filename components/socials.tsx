@@ -26,7 +26,7 @@ const socialIcons = [
 
 export default function Socials() {
   return (
-    <ul className="flex items-center gap-5">
+    <ul className="flex items-center gap-5 w-full">
       {
         socialIcons.map(({ name, icon: Icon, href }) => (
           <li key={name} className="bg-primary p-3">

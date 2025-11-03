@@ -1,4 +1,5 @@
 import AboutSection from "@/components/about-section";
+import ContactSection from "@/components/contact-section";
 import ExperienceSection from "@/components/exprience-section";
 import Header from "@/components/header";
 import Navbar from "@/components/navbar";
@@ -12,6 +13,7 @@ export default function Page() {
       <SkillSection />
       <ExperienceSection />
       <AboutSection />
+      <ContactSection />
     </>
   );
 }
