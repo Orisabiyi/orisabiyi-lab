@@ -47,7 +47,7 @@ export default function SkillSection() {
     <section id="skills" className="flex flex-col items-center gap-10 py-10 w-full container mx-auto font-sora">
       <h2 className="text-4xl font-medium">My <span className="text-primary font-bold">Skills</span></h2>
 
-      <ul className="grid grid-cols-5 gap-5 h-96 w-full">
+      <ul className="grid grid-cols-2 md:grid-cols-5 gap-5 md:h-96 w-full px-10">
         {
           skills.map(({ icon: Icon, name }) => (
             <li key={name} className="w-full border-2 border-gray-400 flex flex-col items-center justify-center gap-2 text-primary hover:border-0 hover:bg-primary hover:text-white transition-colors delay-75">

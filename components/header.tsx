@@ -3,9 +3,9 @@ import Socials from "./socials";
 
 
 export default function Header() {
-  return <header className="flex h-[90vh] 2xl:h-[80vh] py-10 container mx-auto font-sora">
-    <div className="w-[38%] self-end flex flex-col items-start gap-5">
-      <h2 className="text-3xl 2xl:text-4xl flex flex-col gap-2 2xl:gap-4 w-full">
+  return <header className="flex flex-col md:flex-row md:h-[90vh] 2xl:h-[80vh] py-10 container mx-auto font-sora">
+    <div className="md:w-[38%] p-10 md:p-0 self-end flex flex-col items-start gap-3 md:gap-5 order-1 md:order-0">
+      <h2 className="text-2xl md:text-3xl 2xl:text-4xl flex flex-col gap-1 md:gap-2 2xl:gap-4 w-full">
         <span className="font-semibold text-primary">
           Hello I&apos;m Orisabiyi David.
         </span>
@@ -21,7 +21,7 @@ export default function Header() {
         </span>
       </h2>
 
-      <p className="text-xl">
+      <p className="text-base md:text-xl">
         I am Orisabiyi David, a curios builder, thoughtful designer and
         lifelong tinkerer. At <span className="font-semibold">Orisabiyi Lab,</span> I explore the
         edges of software, design and AI.
@@ -29,13 +29,13 @@ export default function Header() {
       <Socials />
     </div>
 
-    <figure className="flex-1">
+    <figure className="w-full md:flex-1 flex items-center justify-center">
       <Image
         src="/images/hero-icon-banner.svg"
         alt="Orisabiyi Lab"
         width={600}
         height={600}
-        className="w-full h-full inline-block object-cover"
+        className="w-full h-full block object-cover"
       />
     </figure>
   </header>

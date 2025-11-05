@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function AboutSection() {
   return (
-    <section className="container mx-auto py-10 items-center flex gap-20 font-sora">
+    <section className="container mx-auto py-10 items-center flex flex-col md:flex-row gap-20 font-sora">
       <figure className="w-1/2">
         <Image
           src="/images/me-icon.svg"

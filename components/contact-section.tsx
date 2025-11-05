@@ -2,8 +2,8 @@ import Socials from "./socials";
 
 export default function ContactSection() {
   return (
-    <section className="flex items-center gap-20 py-10 container mx-auto font-sora">
-      <form action="" className="w-1/3 flex flex-col gap-6">
+    <section className="flex flex-col md:flex-row items-center gap-20 py-10 container mx-auto font-sora">
+      <form action="" className="md:w-1/3 flex flex-col gap-6">
         <input
           type="text"
           placeholder="Your Name"
@@ -29,7 +29,7 @@ export default function ContactSection() {
         </div>
       </form>
 
-      <div className="flex-1 space-y-4">
+      <div className="md:flex-1 space-y-4">
         <h2 className="flex flex-col text-4xl font-bold">
           <span>Let&apos;s <span className="text-primary">talk</span> for</span>
           <span>Something <span className="text-primary">special</span></span>

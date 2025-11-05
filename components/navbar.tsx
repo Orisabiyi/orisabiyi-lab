@@ -10,12 +10,12 @@ const navItems = [
 
 export default function Navbar() {
   return (
-    <nav className="flex items-center container mx-auto w-full py-6 font-sora font-medium text-primary">
+    <nav className="flex items-center container mx-auto w-full py-6 px-10 md:px-0 font-sora font-medium text-primary">
       <h1 className="mr-auto text-xl font-semibold">
         <Link href='/'>Orisabiyi Lab</Link>
       </h1>
 
-      <ul className="flex items-center gap-10 text-base">
+      <ul className="hidden md:flex items-center gap-10 text-base">
         {
           navItems.map((item) => (
             <li key={item.href}>
@@ -25,7 +25,7 @@ export default function Navbar() {
         }
       </ul>
 
-      <button className="flex items-center gap-4 ml-auto bg-primary text-white px-4 py-2 hover:bg-purple-700 transition-colors">
+      <button className="hidden flex items-center gap-4 ml-auto bg-primary text-white px-4 py-2 hover:bg-purple-700 transition-colors">
         <span>Resume</span>
         <Download size={20} />
       </button>
