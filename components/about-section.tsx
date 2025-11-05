@@ -1,3 +1,4 @@
+import { about } from "@/lib/homepage-content";
 import Image from "next/image";
 
 export default function AboutSection() {
@@ -18,27 +19,12 @@ export default function AboutSection() {
           <span className="font-bold text-primary"> Me</span>
         </h2>
         <p className="text-lg leading-relaxed">
-          I&apos;m Orisabiyi David; a software engineer, designer, and product
-          thinker based in Nigeria. I thrive at the intersection of code,
-          creativity, and curiosity, building digital experiences that are both
-          thoughtful and functional.
-          <br />
-          <br />
-          Since starting my journey in 2015, I&apos;ve
-          grown from creating static sites to engineering full-stack
-          applications using modern tools like Next.js, TypeScript, NestJS, NodeJS
-          TailwindCSS and many more. I care deeply about clean architecture,
-          intuitive design, and writing performant, maintainable code.
-          <br />
-          <br />
-          My long-term goal is to contribute to world-class products at a leading
-          tech company solving meaningful problems at scale, collaborating
-          with brilliant minds, and continuing to grow as a builder and thinker.
-          <br />
-          <br />
-          When I&apos;m not deep in code, I&apos;m exploring design systems, experimenting
-          with AI, or sharing my journey on Twitter and GitHub. Orisabiyi Lab is
-          where I learn out loud, build boldly, and stay endlessly curious.
+          {about.body.replace(/<br \/>/g, "\n").replace(/<\/?p>/g, "").split("\n").map((line, index) => (
+            <span key={index}>
+              {line}
+              <br />
+            </span>
+          ))}
         </p>
       </div>
     </section>
