@@ -42,16 +42,16 @@ export default function ExperienceSection() {
       <h2 className="text-4xl text-white">
         My <span className="font-bold">Experience</span>
       </h2>
-      <ul className="container mx-auto flex flex-col gap-6">
+      <ul className="container mx-auto flex flex-col gap-6 p-6 md:p-0">
         {
           experienceData.map(({ role, company, duration, description }, index) => (
             <li key={index} className={`border border-white/20 p-6 text-white ${(index + 1) % 2 === 0 ? 'bg-black/50' : ''}`}>
               <div className="flex justify-between">
-                <h3 className="text-xl font-semibold">{role}</h3>
+                <h3 className="text-base md:text-xl font-semibold">{role}</h3>
                 <p className="text-sm block">{duration}</p>
               </div>
               <h4 className="text-md">{company}</h4>
-              <p className="text-base mt-2">{description}</p>
+              <p className="text-sm md:text-base mt-2">{description}</p>
             </li>
           ))
         }
