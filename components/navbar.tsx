@@ -19,38 +19,40 @@ export default function Navbar() {
   }
 
   return (
-    <nav className="fixed bg-white/50 backdrop-blur flex items-center container mx-auto w-full py-6 px-10 md:px-0 font-sora font-medium text-primary">
-      <h1 className="mr-auto text-xl font-semibold">
-        <Link href='/'>Orisabiyi Lab</Link>
-      </h1>
+    <nav className="fixed bg-white/50 backdrop-blur w-full">
+      <div className="flex items-center justify-center container mx-auto py-6 px-10 md:px-0 font-sora font-medium text-primary">
+        <h1 className="mr-auto text-xl font-semibold">
+          <Link href='/'>Orisabiyi Lab</Link>
+        </h1>
 
-      <ul className="hidden md:flex items-center gap-10 text-base">
-        {
-          navItems.map((item) => (
-            <li key={item.href}>
-              <Link href={item.href}>{item.name}</Link>
-            </li>
-          ))
-        }
-      </ul>
+        <ul className="hidden md:flex items-center gap-10 text-base">
+          {
+            navItems.map((item) => (
+              <li key={item.href}>
+                <Link href={item.href}>{item.name}</Link>
+              </li>
+            ))
+          }
+        </ul>
 
-      <button className="hidden flex items-center gap-4 ml-auto bg-primary text-white px-4 py-2 hover:bg-purple-700 transition-colors">
-        <span>Resume</span>
-        <Download size={20} />
-      </button>
+        <button className="hidden md:flex items-center gap-4 ml-auto bg-primary text-white px-4 py-2 hover:bg-purple-700 transition-colors">
+          <span>Resume</span>
+          <Download size={20} />
+        </button>
 
-      <button className="md:hidden z-20" onClick={handleToggle}>
-        {!isOpen ? <Menu size={25} /> : <X size={25} />}
-      </button>
+        <button className="md:hidden z-20" onClick={handleToggle}>
+          {!isOpen ? <Menu size={25} /> : <X size={25} />}
+        </button>
 
-      {isOpen && <MobileMenu />}
+        {isOpen && <MobileMenu />}
+      </div>
     </nav>
   )
 }
 
 function MobileMenu() {
   return (
-    <div className="fixed top-0 left-0 w-full h-full bg-white flex flex-col items-center justify-center pt-20 gap-10 font-sora text-primary">
+    <div className="fixed top-0 left-0 w-full h-full bg-white flex flex-col items-center justify-center pt-20 gap-10 font-sora text-primary md:hidden">
       <ul className="flex flex-col items-center gap-10 text-lg">
         {
           navItems.map((item) => (
