@@ -20,10 +20,10 @@ export default function ContactSection() {
           className="w-full border-2 border-gray-500 px-4 py-2 resize-none h-32"
         />
 
-        <div className="flex items-stretch gap-5">
+        <div className="flex items-stretch gap-2 md:gap-5">
           <button
             type="submit"
-            className="w-1/2 bg-black text-white font-semibold">
+            className="w-1/2 bg-black text-white font-semibold px-2">
             Get In Touch
           </button>
           <Socials />
