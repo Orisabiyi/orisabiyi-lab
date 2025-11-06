@@ -35,6 +35,8 @@ export default function Header() {
         alt="Orisabiyi Lab"
         width={600}
         height={600}
+        loading="eager"
+        fetchPriority="high"
         className="w-full h-full block object-cover"
       />
     </figure>
