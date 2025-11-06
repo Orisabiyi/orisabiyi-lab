@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function AboutSection() {
   return (
     <section className="container mx-auto py-10 items-center flex flex-col md:flex-row gap-20 font-sora">
-      <figure className="w-1/2">
+      <figure className="px-10 md:p-0 md:w-1/2">
         <Image
           src="/images/me-icon.svg"
           alt="About Me"
@@ -13,7 +13,7 @@ export default function AboutSection() {
           className="w-full h-auto"
         />
       </figure>
-      <div className="flex-1 flex flex-col gap-6">
+      <div className="flex-1 flex flex-col gap-6 px-10 md:p-0">
         <h2 className="text-4xl">
           <span>About</span>
           <span className="font-bold text-primary"> Me</span>

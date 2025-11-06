@@ -2,7 +2,7 @@ import Socials from "./socials";
 
 export default function ContactSection() {
   return (
-    <section className="flex flex-col md:flex-row items-center gap-20 py-10 container mx-auto font-sora">
+    <section className="flex flex-col md:flex-row items-center gap-10 md:gap-20 py-5 md:py-10 container mx-auto font-sora">
       <form action="" className="md:w-1/3 flex flex-col gap-6">
         <input
           type="text"
@@ -29,12 +29,12 @@ export default function ContactSection() {
         </div>
       </form>
 
-      <div className="md:flex-1 space-y-4">
-        <h2 className="flex flex-col text-4xl font-bold">
+      <div className="md:flex-1 space-y-2 md:space-y-4 px-10 md:px-0">
+        <h2 className="flex flex-col text-3xl md:text-4xl font-bold">
           <span>Let&apos;s <span className="text-primary">talk</span> for</span>
           <span>Something <span className="text-primary">special</span></span>
         </h2>
-        <p className="text-base w-4/5">
+        <p className="text-sm md:text-base w-4/5">
           I care about creating experiences that feel good to use. Intuitive,
           engaging and memorable. Whether it&apos;s through design, code or
           experimentation, I&apos;m always looking for ways to make digital
@@ -42,8 +42,8 @@ export default function ContactSection() {
         </p>
 
         <div className="space-y-1">
-          <h3 className="text-2xl">orisabiyidavid@gmail.com</h3>
-          <p className="text-xl">+234 916 6331 550</p>
+          <h3 className="text-lg md:text-2xl">orisabiyidavid@gmail.com</h3>
+          <p className="text-base md:text-xl">+234 916 6331 550</p>
         </div>
       </div>
     </section>
