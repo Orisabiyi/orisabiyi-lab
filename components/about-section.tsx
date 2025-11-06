@@ -10,6 +10,10 @@ export default function AboutSection() {
           alt="About Me"
           width={1200}
           height={600}
+          loading="lazy"
+          fetchPriority="low"
+          priority={false}
+          preload={true}
           className="w-full h-auto"
         />
       </figure>

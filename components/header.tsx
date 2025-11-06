@@ -37,6 +37,7 @@ export default function Header() {
         width={600}
         height={600}
         loading="eager"
+        preload={true}
         fetchPriority="high"
         priority={true}
         className="w-full h-full block object-cover"
