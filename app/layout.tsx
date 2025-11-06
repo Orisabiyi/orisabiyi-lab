@@ -17,6 +17,9 @@ export const metadata: Metadata = {
   },
   description:
     "I'm Orisabiyi, a designer, software engineer and product thinker. Orisabiyi Lab is my space where I build things that matter, explore ideas that excite me and share the journey as it unfolds.",
+  verification: {
+    google: "RW-SVzKPYwN0phkr-oAz6WaXcuDV542VlcQJWUD9AbI"
+  },
   keywords: [
     "Software Engineer",
     "Full-Stack Developer",
