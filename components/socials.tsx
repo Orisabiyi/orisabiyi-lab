@@ -1,5 +1,6 @@
-import { Instagram, Linkedin, Twitter } from "lucide-react";
+import { Instagram, Linkedin, Twitter, X } from "lucide-react";
 import Link from "next/link";
+import { FaMedium } from "react-icons/fa";
 
 const socialIcons = [
   {
@@ -19,8 +20,8 @@ const socialIcons = [
   },
   {
     name: 'TikTok',
-    icon: Linkedin,
-    href: 'https://linkedin.com/in/orisabiyi',
+    icon: FaMedium,
+    href: 'https://x.com/DevOrisabiyi',
   }
 ]
 
