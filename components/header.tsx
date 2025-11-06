@@ -39,7 +39,7 @@ export default function Header() {
         loading="eager"
         preload={true}
         fetchPriority="high"
-        priority={true}
+        // priority={true}
         className="w-full h-full block object-cover"
       />
     </figure>

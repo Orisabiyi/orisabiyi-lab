@@ -13,7 +13,6 @@ export default function AboutSection() {
           loading="lazy"
           fetchPriority="low"
           priority={false}
-          preload={true}
           className="w-full h-auto"
         />
       </figure>
