@@ -1,4 +1,4 @@
-import { Instagram, Linkedin, Twitter, X } from "lucide-react";
+import { Instagram, Linkedin, Twitter } from "lucide-react";
 import Link from "next/link";
 import { FaMedium } from "react-icons/fa";
 

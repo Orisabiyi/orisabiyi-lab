@@ -18,7 +18,7 @@ export default function AboutSection() {
           <span>About</span>
           <span className="font-bold text-primary"> Me</span>
         </h2>
-        <p className="text-lg leading-relaxed">
+        <p className="text-base leading-relaxed">
           {about.body.replace(/<br \/>/g, "\n").replace(/<\/?p>/g, "").split("\n").map((line, index) => (
             <span key={index}>
               {line}
