@@ -1,5 +1,6 @@
-import Image from "next/image";
-import Socials from "./socials";
+import dynamic from "next/dynamic";
+const Image = dynamic(() => import("next/image"));
+const Socials = dynamic(() => import("./socials"));
 
 
 export default function Header() {
@@ -37,6 +38,7 @@ export default function Header() {
         height={600}
         loading="eager"
         fetchPriority="high"
+        priority={true}
         className="w-full h-full block object-cover"
       />
     </figure>

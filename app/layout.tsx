@@ -24,6 +24,13 @@ export const metadata: Metadata = {
       "msvalidate.01": "3603F95AD54D3D426F263B58A813250C",
     }
   },
+  other: {
+    'link:preconnect': [
+      'https://orisabiyi-lab.vercel.app',
+      'https://fonts.googleapis.com',
+      'https://vitals.vercel-insights.com'
+    ]
+  },
   keywords: [
     "Software Engineer",
     "Full-Stack Developer",
