@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Socials from "./socials";
 
 export default function ContactSection() {
@@ -42,8 +43,12 @@ export default function ContactSection() {
         </p>
 
         <div className="space-y-1">
-          <h3 className="text-lg md:text-2xl">orisabiyidavid@gmail.com</h3>
-          <p className="text-base md:text-xl">+234 916 6331 550</p>
+          <h3 className="text-lg md:text-2xl">
+            <Link href='mailto:orisabiyidavid@gmail.com'>orisabiyidavid@gmail.com</Link>
+          </h3>
+          <p className="text-base md:text-xl">
+            <Link href='tel:+2349166331550'>+234 916 6331 550</Link>
+          </p>
         </div>
       </div>
     </section>
