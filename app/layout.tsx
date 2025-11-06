@@ -98,7 +98,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <SpeedInsights />
-      <body className={`${sora.variable} antialiased bg-white relative`}>{children}</body>
+      <body className={`${sora.className} antialiased bg-white relative`}>{children}</body>
     </html>
   );
 }
