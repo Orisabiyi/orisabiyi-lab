@@ -7,6 +7,9 @@ import Navbar from "@/components/navbar";
 import SkillSection from "@/components/skills-section";
 import Script from "next/script";
 
+
+export const revalidate = 3600;
+
 export default function Page() {
   const schema = {
     "@context": "https://schema.org",
