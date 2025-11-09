@@ -10,7 +10,7 @@ import Script from "next/script";
 
 export const revalidate = 3600;
 
-export default function Page() {
+export default async function Page() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "Person",

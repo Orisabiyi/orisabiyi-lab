@@ -9,7 +9,10 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@ai-sdk/deepseek": "^1.0.27",
+    "@ai-sdk/google": "^2.0.29",
     "@vercel/speed-insights": "^1.2.0",
+    "ai": "^5.0.89",
     "lucide-react": "^0.552.0",
     "next": "16.0.1",
     "next-sitemap": "^4.2.3",
