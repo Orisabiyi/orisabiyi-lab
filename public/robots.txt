@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://orisabiyi-lab.vercel.app
+
+# Sitemaps
+Sitemap: https://orisabiyi-lab.vercel.app/sitemap.xml
