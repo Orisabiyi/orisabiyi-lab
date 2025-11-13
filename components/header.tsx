@@ -1,21 +1,10 @@
 'use client';
 
 import dynamic from "next/dynamic";
-import { useEffect } from "react";
 const Image = dynamic(() => import("next/image"));
 const Socials = dynamic(() => import("./socials"));
 
 export default function Header() {
-  useEffect(function () {
-    async function fetchData() {
-      const res = await fetch('/api/ai')
-      const data = await res.json();
-      console.log(data.text);
-    }
-
-    fetchData();
-  }, [])
-
   return (
     <header className="flex flex-col md:flex-row md:h-[90vh] 2xl:h-[80vh] pt-20 pb-5 md:py-10 md:pt-22 container mx-auto font-sora">
       <div className="md:w-[38%] p-10 md:p-0 self-end flex flex-col items-start gap-3 md:gap-5 order-1 md:order-0">

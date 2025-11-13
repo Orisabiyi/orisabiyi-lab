@@ -11,6 +11,7 @@
   "dependencies": {
     "@ai-sdk/deepseek": "^1.0.27",
     "@ai-sdk/google": "^2.0.29",
+    "@ai-sdk/react": "^2.0.93",
     "@vercel/speed-insights": "^1.2.0",
     "ai": "^5.0.89",
     "lucide-react": "^0.552.0",
@@ -18,7 +19,8 @@
     "next-sitemap": "^4.2.3",
     "react": "19.2.0",
     "react-dom": "19.2.0",
-    "react-icons": "^5.5.0"
+    "react-icons": "^5.5.0",
+    "zod": "^4.1.12"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",

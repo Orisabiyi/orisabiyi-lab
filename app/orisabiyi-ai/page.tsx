@@ -1,16 +1,29 @@
-'use client';
+"use client";
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaRegPenToSquare } from "react-icons/fa6";
 import { TbSend } from "react-icons/tb";
+import { useChat } from '@ai-sdk/react'
 
 export default function Page() {
-  const [message, setMessage] = useState('')
+  const [input, setInput] = useState("");
+  const { messages, sendMessage } = useChat();
+
+  useEffect(() => {
+    console.log(messages);
+  }, [messages])
 
   function handleMessageChange(e: React.ChangeEvent<HTMLInputElement>) {
-    setMessage(e.target.value);
+    setInput(e.target.value);
+  }
+
+  function handleSubmit(e: React.FormEvent) {
+    e.preventDefault();
+
+    sendMessage({ text: input });
+    setInput("");
   }
 
   return (
@@ -48,23 +61,23 @@ export default function Page() {
             />
           </figure>
           <h1 className="text-xl font-medium">
-            Hey, I&apos;m Orisa, your product co-creator. Ready to shape your next
-            big idea?
+            Hey, I&apos;m Orisa, your product co-creator. Ready to shape your
+            next big idea?
           </h1>
         </div>
 
-        <div className="relative w-2/3">
+        <form className="relative w-2/3" onSubmit={handleSubmit}>
           <input
             type="text"
-            value={message}
+            value={input}
             onChange={handleMessageChange}
             placeholder="Type your message here..."
             className="w-full border-2 border-primary rounded-full placeholder:text-primary placeholder:font-light p-3 block outline-none"
           />
-          <button className="absolute top-1/2 right-5 transform -translate-y-1/2 cursor-pointer">
+          <button type="submit" className="absolute top-1/2 right-5 transform -translate-y-1/2 cursor-pointer">
             <TbSend size={25} className="text-primary" />
           </button>
-        </div>
+        </form>
       </div>
     </section>
   );
