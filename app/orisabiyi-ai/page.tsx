@@ -2,21 +2,28 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { FaRegPenToSquare } from "react-icons/fa6";
 import { TbSend } from "react-icons/tb";
 import { useChat } from '@ai-sdk/react'
 
 export default function Page() {
   const [input, setInput] = useState("");
+  const textareaRef = useRef<HTMLTextAreaElement | null>(null);
   const { messages, sendMessage } = useChat();
 
   useEffect(() => {
     console.log(messages);
   }, [messages])
 
-  function handleMessageChange(e: React.ChangeEvent<HTMLInputElement>) {
+  function handleMessageChange(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
     setInput(e.target.value);
+
+    // auto-resize so wrapped lines remain visible (optional)
+    if (textareaRef.current) {
+      textareaRef.current.style.height = "auto";
+      textareaRef.current.style.height = `${textareaRef.current.scrollHeight}px`;
+    }
   }
 
   function handleSubmit(e: React.FormEvent) {
@@ -67,12 +74,13 @@ export default function Page() {
         </div>
 
         <form className="relative w-2/3" onSubmit={handleSubmit}>
-          <input
-            type="text"
+          <textarea
+            ref={textareaRef}
             value={input}
             onChange={handleMessageChange}
             placeholder="Type your message here..."
-            className="w-full border-2 border-primary rounded-full placeholder:text-primary placeholder:font-light p-3 block outline-none"
+            rows={1}
+            className="w-full border-2 border-primary rounded-full placeholder:text-primary placeholder:font-light py-2 pl-5 pr-12 !h-16 block outline-none resize-none overflow-x-hidden scrollbar-hide"
           />
           <button type="submit" className="absolute top-1/2 right-5 transform -translate-y-1/2 cursor-pointer">
             <TbSend size={25} className="text-primary" />
