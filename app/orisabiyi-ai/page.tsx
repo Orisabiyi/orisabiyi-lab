@@ -69,7 +69,16 @@ export default function Page() {
       </div>
 
       <div className="p-10 h-full flex-1 text-black flex flex-col items-center justify-center gap-6">
-        {chat.length === 0 && (
+        {chat.length > 0 && (
+          <>
+            {messages.map((msg, index) => (
+              <div key={index} className="self-end">
+                <p>{msg.role === "user" && 'text' in msg.parts[0] && msg.parts[0]?.text}</p>
+              </div>
+            ))}
+          </>
+        )}
+        {(
           <>
             <div className="flex items-center justify-center gap-4">
               <figure className="w-16 h-16 bg-primary flex items-center justify-center p-2 rounded-full">
@@ -82,8 +91,8 @@ export default function Page() {
                 />
               </figure>
               <h1 className="text-xl font-medium">
-                Hey, I&apos;m Orisa, your product co-creator. Ready to shape your
-                next big idea?
+                Hey, I&apos;m Orisa, your product co-creator. Ready to shape
+                your next big idea?
               </h1>
             </div>
 
