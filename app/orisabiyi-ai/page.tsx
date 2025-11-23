@@ -126,3 +126,5 @@ export default function Page() {
     </section>
   );
 }
+
+// Animation for the AI icon - it should have a bouncing effect to indicate it's active
