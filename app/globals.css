@@ -37,3 +37,7 @@ body {
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
+
+img.about-img {
+  transform: scaleX(-1);
+}

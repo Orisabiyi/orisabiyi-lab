@@ -33,9 +33,10 @@ export default function Header() {
         <Socials />
       </div>
 
-      <figure className="w-full md:flex-1 flex items-center justify-center">
+      <figure className="w-full  md:flex-1 flex items-center justify-center overflow-hidden">
         <Image
-          src="/images/hero-icon-banner.svg"
+          src="/images/davd-hero.png"
+          // src="/images/hero-icon-banner.svg"
           alt="Orisabiyi Lab"
           width={600}
           height={600}
@@ -43,7 +44,7 @@ export default function Header() {
           preload={true}
           fetchPriority="high"
           // priority={true}
-          className="w-full h-full block object-cover"
+          className="w-full h-full block object-contain scale-120"
         />
       </figure>
     </header>
