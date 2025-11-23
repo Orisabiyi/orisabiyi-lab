@@ -3,7 +3,7 @@ import Socials from "./socials";
 
 export default function ContactSection() {
   return (
-    <section className="flex flex-col md:flex-row items-center gap-10 md:gap-20 py-5 md:py-10 container mx-auto font-sora">
+    <section id="contact-me" className="flex flex-col md:flex-row items-center gap-10 md:gap-20 py-5 md:py-10 container mx-auto font-sora">
       <form action="" className="md:w-1/3 flex flex-col gap-6">
         <input
           type="text"
