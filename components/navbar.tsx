@@ -20,7 +20,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="bg-white/50 backdrop-blur w-full z-40">
+      <nav className="bg-gray-100 backdrop-blur w-full z-40">
         <div className="flex items-center justify-center container mx-auto py-6 px-10 md:px-0 font-sora font-medium text-primary">
           <h1 className="mr-auto text-xl font-semibold">
             <Link href="/">Orisabiyi Lab</Link>
