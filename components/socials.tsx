@@ -25,19 +25,19 @@ const socialIcons = [
   }
 ]
 
-export default function Socials() {
+export default function Socials({ itemClassName, iconClassName }: { itemClassName?: string, iconClassName?: string }) {
   return (
     <ul className="flex items-center gap-2 md:gap-5 w-full">
       {
         socialIcons.map(({ name, icon: Icon, href }) => (
-          <li key={name} className="bg-primary p-3">
+          <li key={name} className={itemClassName || "bg-primary p-3"}>
             <Link
               href={href}
               target="_blank"
               rel="noreferrer"
               aria-label={name}
             >
-              <Icon size={22} className="text-white transition-colors" />
+              <Icon size={22} className={`${iconClassName ? iconClassName : 'text-white'} transition-colors`} />
             </Link>
           </li>
         ))

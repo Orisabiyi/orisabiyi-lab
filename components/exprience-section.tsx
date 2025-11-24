@@ -54,7 +54,7 @@ export default function ExperienceSection() {
   return (
     <section
       id="experience"
-      className="flex flex-col items-center gap-10 py-5 md:py-10 w-full font-sora bg-gradient-to-b from-[var(--secondary)] via-[var(--primary-1)] to-[var(--secondary)]"
+      className="flex flex-col items-center gap-10 py-5 md:py-16 w-full font-sora bg-gradient-to-b from-[var(--secondary)] via-[var(--primary-1)] to-[var(--secondary)]"
     >
       <h2 className="text-4xl text-white">
         My <span className="font-bold">Experience</span>

@@ -44,7 +44,7 @@ const skills = [
 
 export default function SkillSection() {
   return (
-    <section id="skills" className="flex flex-col items-center gap-10 py-5 md:py-10 w-full container mx-auto font-sora">
+    <section id="skills" className="flex flex-col items-center gap-10 py-5 md:py-16 w-full container mx-auto font-sora">
       <h2 className="text-4xl font-medium">My <span className="text-primary font-bold">Skills</span></h2>
 
       <ul className="grid grid-cols-2 md:grid-cols-5 gap-5 md:h-96 w-full px-10 md:p-0">

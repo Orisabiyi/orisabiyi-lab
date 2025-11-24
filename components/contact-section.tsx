@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import Link from "next/link";
 import Socials from "./socials";
@@ -35,7 +35,8 @@ export default function ContactSection() {
           const data = await sendMail(formState.description, formState.email);
           console.log("Client message sent:", data);
         } catch (error) {
-          const errorMsg = error instanceof Error ? error.message : "Unknown error";
+          const errorMsg =
+            error instanceof Error ? error.message : "Unknown error";
           toast.error(`Failed to send message: ${errorMsg}`);
         }
       }
@@ -47,65 +48,69 @@ export default function ContactSection() {
   return (
     <section
       id="contact-me"
-      className="flex flex-col md:flex-row items-center gap-10 md:gap-20 py-5 md:py-10 container mx-auto font-sora">
-      <form action={formAction} className="md:w-1/3 flex flex-col gap-6">
-        <input
-          type="text"
-          name="clientName"
-          placeholder="Your Name"
-          className="w-full border-2 border-gray-500 px-4 py-2"
-        />
-        <input
-          type="email"
-          name="clientEmail"
-          placeholder="Email"
-          className="w-full border-2 border-gray-500 px-4 py-2"
-        />
-        <textarea
-          name="clientDescription"
-          placeholder="Your website (if exists)"
-          className="w-full border-2 border-gray-500 px-4 py-2 resize-none h-32"
-        />
-
-        <div className="flex items-stretch gap-2 md:gap-5">
-          <button
-            type="submit"
-            className="w-1/2 bg-black text-white font-semibold px-2">
-            Get In Touch
-          </button>
-          <Socials />
-        </div>
-      </form>
-
-      <div className="md:flex-1 space-y-2 md:space-y-4 px-10 md:px-0">
-        <h2 className="flex flex-col text-3xl md:text-4xl font-bold">
-          <span>
-            Let&apos;s <span className="text-primary">talk</span> for
-          </span>
-          <span>
-            Something <span className="text-primary">special</span>
-          </span>
-        </h2>
-        <p className="text-sm md:text-base w-4/5">
-          I care about creating experiences that feel good to use. Intuitive,
-          engaging and memorable. Whether it&apos;s through design, code or
-          experimentation, I&apos;m always looking for ways to make digital
-          interactions more meaningful and human centered
-        </p>
-
-        <div className="space-y-1">
-          <h3 className="text-lg md:text-2xl">
-            <Link href="mailto:orisabiyidavid@gmail.com">
-              orisabiyidavid@gmail.com
-            </Link>
-          </h3>
-          <p className="text-base md:text-xl">
-            <Link href="tel:+2349166331550">+234 916 6331 550</Link>
+      className="font-sora bg-primary relative">
+      <div className="flex flex-col md:flex-row items-stretch gap-10 md:gap-20">
+        <div className="md:w-1/2 space-y-2 md:space-y-4 px-10 md:pl-20 text-white py-16">
+          <h2 className="flex flex-col text-3xl md:text-4xl font-bold">
+            <span>
+              Let&apos;s <span className="text-primary-1">talk</span> for
+            </span>
+            <span>
+              Something <span className="text-primary-1">special</span>
+            </span>
+          </h2>
+          <p className="text-sm md:text-base w-4/5">
+            I care about creating experiences that feel good to use. Intuitive,
+            engaging and memorable. Whether it&apos;s through design, code or
+            experimentation, I&apos;m always looking for ways to make digital
+            interactions more meaningful and human centered
           </p>
-        </div>
-      </div>
 
-      <Toaster position="bottom-right" />
+          <div className="space-y-2">
+            <h3 className="text-lg md:text-2xl">
+              <Link href="mailto:orisabiyidavid@gmail.com">
+                orisabiyidavid@gmail.com
+              </Link>
+            </h3>
+            <p className="text-base md:text-xl">
+              <Link href="tel:+2349166331550">+234 916 6331 550</Link>
+            </p>
+            <Socials itemClassName="bg-white p-3" iconClassName="text-primary" />
+          </div>
+        </div>
+
+        <form
+          action={formAction}
+          className="md:w-1/2 h-full flex flex-col gap-6 order-1 bg-gray-100 px-20 py-5 md:py-16">
+          <input
+            type="text"
+            name="clientName"
+            placeholder="Your Name"
+            className="w-full border border-gray-400 px-4 py-2 placeholder:text-gray-300"
+          />
+          <input
+            type="email"
+            name="clientEmail"
+            placeholder="Email"
+            className="w-full border border-gray-400 px-4 py-2 placeholder:text-gray-300"
+          />
+          <textarea
+            name="clientDescription"
+            placeholder="Your website (if exists)"
+            className="w-full border border-gray-400 px-4 py-2 placeholder:text-gray-300 resize-none h-32"
+          />
+
+          <div className="flex flex-col items-stretch gap-2 md:gap-5">
+            <button
+              type="submit"
+              className="w-1/2 bg-black text-white font-semibold p-2 w-full inline-block">
+              Get In Touch
+            </button>
+          </div>
+        </form>
+
+        <Toaster position="bottom-right" />
+      </div>
     </section>
   );
 }
