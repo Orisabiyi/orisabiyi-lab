@@ -3,21 +3,23 @@
 import Link from "next/link";
 import Socials from "./socials";
 import { useActionState, useEffect } from "react";
+import { sendMail } from "@/app/server/sendMail";
+import { toast, Toaster } from "sonner";
 
 interface QueryData {
   get(key: string): FormDataEntryValue | null;
 }
 
-function sendClientMessage(
+async function sendClientMessage(
   prevState: Record<string, string>,
   queryData: QueryData
 ) {
-  console.log(prevState);
   const name = queryData.get("clientName")?.toString() || "";
   const email = queryData.get("clientEmail")?.toString() || "";
   const description = queryData.get("clientDescription")?.toString() || "";
 
-  return { name, email, description }
+  return { name, email, description };
+  // return { name, email, description }
 }
 
 export default function ContactSection() {
@@ -27,8 +29,20 @@ export default function ContactSection() {
   >(sendClientMessage, {});
 
   useEffect(() => {
-    console.log(formState)
-  }, [formState])
+    async function handleSendMail() {
+      if (formState?.email) {
+        try {
+          const data = await sendMail(formState.description, formState.email);
+          console.log("Client message sent:", data);
+        } catch (error) {
+          const errorMsg = error instanceof Error ? error.message : "Unknown error";
+          toast.error(`Failed to send message: ${errorMsg}`);
+        }
+      }
+    }
+
+    handleSendMail();
+  }, [formState]);
 
   return (
     <section
@@ -90,6 +104,8 @@ export default function ContactSection() {
           </p>
         </div>
       </div>
+
+      <Toaster position="bottom-right" />
     </section>
   );
 }
