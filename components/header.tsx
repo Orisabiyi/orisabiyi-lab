@@ -6,7 +6,7 @@ const Socials = dynamic(() => import("./socials"));
 
 export default function Header() {
   return (
-    <header className="flex flex-col md:flex-row md:h-[90vh] 2xl:h-[80vh] pt-20 pb-5 md:py-32 container mx-auto font-sora">
+    <header className="flex flex-col md:flex-row md:min-h-[80vh] pt-20 pb-5 md:py-32 container mx-auto font-sora">
       <div className="md:w-[38%] self-end flex flex-col items-start gap-3 md:gap-5 order-1 md:order-0">
         <h2 className="text-2xl md:text-3xl 2xl:text-4xl flex flex-col gap-1 md:gap-2 2xl:gap-4 w-full">
           <span className="font-semibold text-primary">
@@ -36,14 +36,12 @@ export default function Header() {
       <figure className="w-full h-auto md:flex-1 flex items-center justify-center">
         <Image
           src="/images/davd-hero.png"
-          // src="/images/hero-icon-banner.svg"
           alt="Orisabiyi Lab"
           width={600}
           height={600}
           loading="eager"
           preload={true}
           fetchPriority="high"
-          // priority={true}
           className="w-full h-auto block object-cover"
         />
       </figure>
