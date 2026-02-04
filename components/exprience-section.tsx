@@ -53,14 +53,14 @@ export default function ExperienceSection() {
   return (
     <section
       id="experience"
-      className="py-5 md:py-32 w-full font-sora bg-gradient-to-b from-[var(--secondary)] via-[var(--primary-1)] to-[var(--secondary)]">
-      <div className="2xl:container mx-auto w-full flex flex-col md:flex-row items-start justify-center gap-20 relative">
-        <h2 className="text-4xl text-white sticky top-10">
+      className="py-12 md:py-32 w-full font-sora bg-gradient-to-b from-[var(--secondary)] via-[var(--primary-1)] to-[var(--secondary)]">
+      <div className="2xl:container mx-auto w-full flex flex-col md:flex-row items-start justify-center gap-5 lg:gap-20 relative">
+        <h2 className="text-4xl text-white self-center lg:sticky lg:top-10">
           My <span className="font-bold">Experience</span>
         </h2>
         <ul className="flex flex-col gap-6 p-6 md:p-0 relative md:w-1/2">
           {experienceData.map(
-            ({ role, company, duration, description }, index) => (
+            ({ role, company, description }, index) => (
               <li
                 key={index}
                 className={`border border-white/20 p-6 ${(index + 1) % 2 === 0
@@ -71,7 +71,7 @@ export default function ExperienceSection() {
               >
                 <div className="flex justify-between">
                   <h3 className="text-base md:text-xl font-semibold">{role}</h3>
-                  <p className="text-sm block">{duration}</p>
+                  {/* <p className="text-sm block">{duration}</p> */}
                 </div>
                 <h4 className="text-md">{company}</h4>
                 <p className="text-sm mt-2">{description}</p>
