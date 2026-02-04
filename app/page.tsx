@@ -1,5 +1,5 @@
 import AboutSection from "@/components/about-section";
-import OrisabiyiAI from "@/components/ai/main";
+// import OrisabiyiAI from "@/components/ai/main";
 import ContactSection from "@/components/contact-section";
 import ExperienceSection from "@/components/exprience-section";
 import Footer from "@/components/footer";
@@ -39,7 +39,7 @@ export default async function Page() {
       <AboutSection />
       <ContactSection />
       <Footer />
-      <OrisabiyiAI />
+      {/* <OrisabiyiAI /> */}
     </main>
   );
 }
