@@ -49,14 +49,14 @@ export default function ContactSection() {
     <section
       id="contact-me"
       className="font-sora bg-primary relative">
-      <div className="flex flex-col md:flex-row items-stretch gap-10 md:gap-20">
-        <div className="md:w-1/2 space-y-2 md:space-y-4 px-10 md:pl-20 text-white py-32">
+      <div className="flex flex-col md:flex-row items-stretch md:px-0 gap-10 md:gap-20">
+        <div className="md:w-1/2 space-y-2 md:space-y-4 px-10 md:pl-20 text-white py-10 md:py-32">
           <h2 className="flex flex-col text-3xl md:text-4xl font-bold">
             <span>
-              Let&apos;s <span className="text-primary-1">talk</span> for
+              Let&apos;s talk for
             </span>
             <span>
-              Something <span className="text-primary-1">special</span>
+              Something special
             </span>
           </h2>
           <p className="text-sm md:text-base w-4/5">
@@ -81,7 +81,7 @@ export default function ContactSection() {
 
         <form
           action={formAction}
-          className="md:w-1/2 h-full flex flex-col gap-6 order-1 bg-gray-100 px-20 py-5 md:py-32">
+          className="w-full md:w-1/2 h-full flex flex-col gap-6 order-1 bg-gray-100 px-10 md:px-20 py-5 md:py-32">
           <input
             type="text"
             name="clientName"
