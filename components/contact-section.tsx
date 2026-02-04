@@ -48,7 +48,7 @@ export default function ContactSection() {
   return (
     <section
       id="contact-me"
-      className="font-sora bg-[#0000aa] relative">
+      className="font-sora bg-primary-blue-3 relative">
       <div className="flex flex-col md:flex-row items-stretch md:px-0 gap-10 md:gap-20">
         <div className="md:w-1/2 space-y-2 md:space-y-4 px-10 md:pl-20 text-white py-10 md:py-32">
           <h2 className="flex flex-col text-3xl md:text-4xl font-bold">

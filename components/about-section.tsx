@@ -19,7 +19,7 @@ export default function AboutSection() {
       <div className="flex-1 flex flex-col gap-6 md:p-0">
         <h2 className="text-2xl md:text-4xl">
           <span>About</span>
-          <span className="font-bold text-primary"> Me</span>
+          <span className="font-bold text-primary-blue-3"> Me</span>
         </h2>
         <p className="text-sm leading-relaxed">
           {about.body.replace(/<br \/>/g, "\n").replace(/<\/?p>/g, "").split("\n").map((line, index) => (
