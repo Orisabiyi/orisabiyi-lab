@@ -47,7 +47,7 @@ export default function Page() {
 
   return (
     <section className="font-sora h-screen flex items-stretch">
-      <div className="w-1/6 py-5 px-10 h-full bg-primary border-r border-gray-300 flex flex-col gap-10">
+      <div className="w-1/6 py-5 px-10 h-full bg-gray-800 flex flex-col gap-10">
         <figure className="w-16 h-16 self-center">
           <Image
             src="/images/orisabiyi-ai.svg"
@@ -68,12 +68,12 @@ export default function Page() {
         </ul>
       </div>
 
-      <div className="p-10 h-full flex-1 text-black flex flex-col items-center justify-center gap-6">
+      <div className="p-10 h-full flex-1 bg-gray-600 text-black flex flex-col items-center justify-center gap-6">
         {chat.length > 0 && (
           <>
             {messages.map((msg, index) => (
               <div key={index} className="self-end">
-                <p>{msg.role === "user" && 'text' in msg.parts[0] && msg.parts[0]?.text}</p>
+                <p className="bg-gray-200 p-4 rounded-lg mb-4 text-right break-words max-w-[75ch] max-w-[85%]">{msg.role === "user" && 'text' in msg.parts[0] && msg.parts[0]?.text}</p>
               </div>
             ))}
           </>
@@ -81,7 +81,7 @@ export default function Page() {
         {(
           <>
             <div className="flex items-center justify-center gap-4">
-              <figure className="w-16 h-16 bg-primary flex items-center justify-center p-2 rounded-full">
+              <figure className="w-14 h-14 flex items-center justify-center">
                 <Image
                   src="/images/orisabiyi-ai.svg"
                   alt="AI Bot"
@@ -90,7 +90,7 @@ export default function Page() {
                   className="w-full h-full block"
                 />
               </figure>
-              <h1 className="text-xl font-medium">
+              <h1 className="text-xl text-gray-300 font-medium text-wrap max-w-lg">
                 Hey, I&apos;m Orisa, your product co-creator. Ready to shape
                 your next big idea?
               </h1>
@@ -103,20 +103,20 @@ export default function Page() {
                 onKeyDown={handleKeyDown}
                 placeholder="Type your message here..."
                 rows={1}
-                className="w-full border-2 border-primary rounded-full placeholder:align-middle placeholder:text-primary placeholder:font-light py-5 pl-5 pr-12 block outline-none resize-none overflow-x-hidden scrollbar-hide"
+                className="w-full border-2 border-gray-400 rounded-full placeholder:align-middle placeholder:text-gray-200 placeholder:font-light py-5 pl-5 pr-12 block outline-none resize-none overflow-x-hidden scrollbar-hide"
               />
               {!isLoading && (
                 <button
                   type="submit"
                   className="absolute top-1/2 right-5 transform -translate-y-1/2 cursor-pointer">
-                  <TbSend size={25} className="text-primary" />
+                  <TbSend size={25} className="text-gray-300" />
                 </button>
               )}
               {isLoading && (
                 <button
                   type="button"
                   className="absolute top-1/2 right-5 transform -translate-y-1/2 cursor-pointer">
-                  <FaStop size={25} className="text-primary" />
+                  <FaStop size={25} className="text-gray-300" />
                 </button>
               )}
             </form>
