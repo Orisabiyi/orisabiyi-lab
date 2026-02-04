@@ -54,11 +54,11 @@ export default function ExperienceSection() {
     <section
       id="experience"
       className="py-12 md:py-32 w-full font-sora bg-gradient-to-b from-[var(--secondary)] via-[var(--primary-1)] to-[var(--secondary)]">
-      <div className="2xl:container mx-auto w-full flex flex-col md:flex-row items-start justify-center gap-5 lg:gap-20 relative">
-        <h2 className="text-4xl text-white self-center lg:sticky lg:top-10">
+      <div className="2xl:container mx-auto w-full flex flex-col md:flex-row items-start justify-center gap-10 lg:gap-20 relative">
+        <h2 className="text-2xl md:text-4xl text-white self-center lg:sticky lg:top-10">
           My <span className="font-bold">Experience</span>
         </h2>
-        <ul className="flex flex-col gap-6 p-6 md:p-0 relative md:w-1/2">
+        <ul className="flex flex-col gap-6 px-6 md:p-0 relative md:w-1/2">
           {experienceData.map(
             ({ role, company, description }, index) => (
               <li
