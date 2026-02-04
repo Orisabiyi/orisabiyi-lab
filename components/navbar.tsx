@@ -20,9 +20,9 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="bg-gray-100 backdrop-blur w-full z-40">
-        <div className="flex items-center justify-center container mx-auto py-6 px-10 md:px-0 font-sora font-medium text-primary">
-          <h1 className="mr-auto text-xl font-semibold">
+      <nav className="bg-gray-100 backdrop-blur w-full z-[9999999]">
+        <div className="flex items-center justify-center container mx-auto py-6 px-5 md:px-0 font-sora font-medium text-primary">
+          <h1 className="mr-auto text-base md:text-xl font-semibold">
             <Link href="/">Orisabiyi Lab</Link>
           </h1>
 
@@ -38,7 +38,7 @@ export default function Navbar() {
             <span>Resume</span>
             <Download size={20} />
           </button>
-          <button className="md:hidden" onClick={handleToggle}>
+          <button className="z-[9999999] fixed top-6 right-6 md:hidden" onClick={handleToggle}>
             {!isOpen ? <Menu size={25} /> : <X size={25} />}
           </button>
         </div>
@@ -50,7 +50,7 @@ export default function Navbar() {
 
 function MobileMenu() {
   return (
-    <div className="fixed top-[72px] left-0 bg-white flex flex-col items-center justify-center gap-10 font-sora text-primary md:hidden w-full h-full">
+    <div className="fixed top-16 left-0 bg-white flex flex-col items-center justify-center gap-10 font-sora text-primary md:hidden w-full h-full">
       <ul className="flex flex-col items-center gap-10 text-lg bg-white">
         {navItems.map((item) => (
           <li key={item.href}>

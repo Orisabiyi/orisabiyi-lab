@@ -37,7 +37,7 @@ export default function Socials({ itemClassName, iconClassName }: { itemClassNam
               rel="noreferrer"
               aria-label={name}
             >
-              <Icon size={22} className={`${iconClassName ? iconClassName : 'text-white'} transition-colors`} />
+              <Icon size={20} className={`${iconClassName ? iconClassName : 'text-white'} transition-colors`} />
             </Link>
           </li>
         ))

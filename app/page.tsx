@@ -26,7 +26,7 @@ export default async function Page() {
   }
 
   return (
-    <>
+    <main className="relative">
       <Script
         id="schema-person"
         type="application/ld+json"
@@ -40,6 +40,6 @@ export default async function Page() {
       <ContactSection />
       <Footer />
       <OrisabiyiAI />
-    </>
+    </main>
   );
 }

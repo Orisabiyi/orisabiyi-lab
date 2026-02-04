@@ -6,9 +6,9 @@ const Socials = dynamic(() => import("./socials"));
 
 export default function Header() {
   return (
-    <header className="flex flex-col md:flex-row md:min-h-[80vh] pt-20 pb-5 md:py-32 container mx-auto font-sora">
-      <div className="md:w-[38%] self-end flex flex-col items-start gap-3 md:gap-5 order-1 md:order-0">
-        <h2 className="text-2xl md:text-3xl 2xl:text-4xl flex flex-col gap-1 md:gap-2 2xl:gap-4 w-full">
+    <header className="flex flex-col md:flex-row md:min-h-[80vh] px-5 md:px-0 md:pt-20 pb-5 md:py-32 container mx-auto font-sora">
+      <div className="md:w-[38%] self-end mt-3 md:mt-0 flex flex-col gap-3 md:gap-5 order-1 md:order-0">
+        <h2 className="text-xl md:text-3xl 2xl:text-4xl flex flex-col md:gap-2 2xl:gap-4 w-full">
           <span className="font-semibold text-primary">
             Hello I&apos;m Orisabiyi David.
           </span>
@@ -24,7 +24,7 @@ export default function Header() {
           </span>
         </h2>
 
-        <p className="text-base md:text-xl">
+        <p className="text-sm md:text-xl">
           I am Orisabiyi David, a curios builder, thoughtful designer and
           lifelong tinkerer. At{" "}
           <span className="font-semibold">Orisabiyi Lab,</span> I explore the
@@ -33,7 +33,7 @@ export default function Header() {
         <Socials />
       </div>
 
-      <figure className="w-full h-auto md:flex-1 flex items-center justify-center">
+      <figure className="h-32 self-end md:self-center md:w-full md:h-auto md:flex-1 flex items-center justify-center">
         <Image
           src="/images/davd-hero.png"
           alt="Orisabiyi Lab"
@@ -42,7 +42,7 @@ export default function Header() {
           loading="eager"
           preload={true}
           fetchPriority="high"
-          className="w-full h-auto block object-cover"
+          className="w-auto h-32 md:w-full md:h-auto block object-cover rounded-full shadow-md md:shadow-none md:rounded-none"
         />
       </figure>
     </header>
