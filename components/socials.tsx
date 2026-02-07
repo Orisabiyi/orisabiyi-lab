@@ -30,7 +30,7 @@ export default function Socials({ itemClassName, iconClassName }: { itemClassNam
     <ul className="flex items-center gap-2 md:gap-5 w-full">
       {
         socialIcons.map(({ name, icon: Icon, href }) => (
-          <li key={name} className={itemClassName || "bg-primary p-3"}>
+          <li key={name} className={itemClassName || "bg-blue-800 p-3"}>
             <Link
               href={href}
               target="_blank"
