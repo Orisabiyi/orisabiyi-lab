@@ -21,7 +21,7 @@ export default function Navbar() {
   return (
     <>
       <nav className="bg-gray-100 backdrop-blur w-full z-[9999999]">
-        <div className="flex items-center justify-center container mx-auto py-6 px-5 md:px-0 font-sora font-medium text-blue-800">
+        <div className="flex items-center justify-center container mx-auto py-6 px-5 md:px-0 font-sora font-medium text-blue-900">
           <h1 className="mr-auto text-base md:text-xl font-semibold">
             <Link href="/">Orisabiyi Lab</Link>
           </h1>
@@ -34,7 +34,7 @@ export default function Navbar() {
             ))}
           </ul>
 
-          <button className="hidden md:flex items-center gap-4 ml-auto bg-blue-800 text-white px-4 py-2 hover:bg-purple-700 transition-colors">
+          <button className="hidden md:flex items-center gap-4 ml-auto bg-blue-900 text-white px-4 py-2 hover:bg-blue-950 transition-colors">
             <span>Resume</span>
             <Download size={20} />
           </button>

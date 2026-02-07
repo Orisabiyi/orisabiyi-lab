@@ -48,7 +48,7 @@ export default function ContactSection() {
   return (
     <section
       id="contact-me"
-      className="font-sora bg-primary-blue-3 relative">
+      className="font-sora bg-blue-950 relative">
       <div className="flex flex-col md:flex-row items-stretch md:px-0 gap-10 md:gap-20">
         <div className="md:w-1/2 space-y-2 md:space-y-4 px-10 md:pl-20 text-white py-10 md:py-32">
           <h2 className="flex flex-col text-3xl md:text-4xl font-bold">
@@ -66,16 +66,16 @@ export default function ContactSection() {
             interactions more meaningful and human centered
           </p>
 
-          <div className="space-y-2">
+          <div className="space-y-4">
             <h3 className="text-lg md:text-2xl">
               <Link href="mailto:orisabiyidavid@gmail.com">
                 orisabiyidavid@gmail.com
               </Link>
             </h3>
-            <p className="text-base md:text-xl">
+            <p className="text-base md:text-xl mb-2">
               <Link href="tel:+2349166331550">+234 916 6331 550</Link>
             </p>
-            <Socials itemClassName="bg-white p-3" iconClassName="text-primary" />
+            <Socials itemClassName="bg-white p-3" iconClassName="text-blue-900" />
           </div>
         </div>
 

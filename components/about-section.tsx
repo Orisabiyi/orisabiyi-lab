@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function AboutSection() {
   return (
     <section id="about-me" className="container mx-auto py-10 md:py-32 px-10 md:px-0 items-center flex flex-col md:flex-row gap-10 md:gap-20 font-sora">
-      <figure className="hidden md:block md:w-1/2 md:border-2 md:border-primary md:rounded-2xl overflow-hidden">
+      <figure className="hidden md:block md:w-1/2 md:border-2 md:border-blue-800 md:rounded-2xl overflow-hidden">
         <Image
           src="/images/david-pic.png"
           alt="About Me"
@@ -19,7 +19,7 @@ export default function AboutSection() {
       <div className="flex-1 flex flex-col gap-6 md:p-0">
         <h2 className="text-2xl md:text-4xl">
           <span>About</span>
-          <span className="font-bold text-primary-blue-3"> Me</span>
+          <span className="font-bold text-blue-800"> Me</span>
         </h2>
         <p className="text-sm leading-relaxed">
           {about.body.replace(/<br \/>/g, "\n").replace(/<\/?p>/g, "").split("\n").map((line, index) => (
