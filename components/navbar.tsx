@@ -26,7 +26,7 @@ export default function Navbar() {
             <Link href="/">Orisabiyi Lab</Link>
           </h1>
 
-          <ul className="hidden md:flex items-center gap-10 text-base">
+          <ul className="hidden md:flex items-center gap-10 text-base text-black">
             {navItems.map((item) => (
               <li key={item.href}>
                 <Link href={item.href}>{item.name}</Link>

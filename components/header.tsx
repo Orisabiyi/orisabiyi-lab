@@ -18,13 +18,13 @@ export default function Header() {
               Software Engineer, Creative thinker and Builder
             </span>
           </span>
-          <span>
+          <span className="text-gray-700 font-semibold">
             Based in{" "}
             <span>Nigeria.</span>
           </span>
         </h2>
 
-        <p className="text-sm md:text-xl mb-2">
+        <p className="text-sm text-gray-600 md:text-xl mb-2">
           I am Orisabiyi David, a curios builder, thoughtful designer and
           lifelong tinkerer. At{" "}
           <span className="font-semibold">Orisabiyi Lab,</span> I explore the
