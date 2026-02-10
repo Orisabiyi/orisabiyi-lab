@@ -7,8 +7,8 @@ const Socials = dynamic(() => import("./socials"));
 export default function Header() {
   return (
     <header className="flex flex-col md:flex-row md:min-h-[80vh] px-5 md:px-0 md:pt-20 pb-5 md:py-32 container mx-auto font-sora">
-      <div className="md:w-[38%] self-end mt-3 md:mt-0 flex flex-col gap-3 md:gap-6 order-1 md:order-0">
-        <h2 className="text-xl md:text-3xl 2xl:text-4xl flex flex-col md:gap-2 2xl:gap-4 w-full">
+      <div className="md:w-[38%] self-end mt-3 md:mt-0 flex flex-col gap-3 md:gap-10 order-1 md:order-0">
+        <h2 className="text-xl md:text-3xl 2xl:text-4xl flex flex-col md:gap-4 2xl:gap-4 w-full">
           <span className="font-semibold text-blue-800">
             Hello I&apos;m Orisabiyi David.
           </span>
