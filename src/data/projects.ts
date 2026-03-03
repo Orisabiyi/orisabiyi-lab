@@ -14,8 +14,8 @@ export const projects: Project[] = [
     title: "Slo Muse",
     category: "E-Commerce",
     year: "2024",
-    description: "A luxury e-commerce platform for premium loungewear. Built with Next.js 15, TypeScript, Prisma ORM, and Zustand. Features a full customer storefront and admin dashboard with Cloudinary image management and PWA support.",
-    tags: ["Next.js 15", "TypeScript", "Prisma", "Zustand", "Cloudinary"],
+    description: "A luxury e-commerce platform for premium loungewear. Built with Next.js 15, TypeScript, Prisma ORM, and Zustand. Features a full customer storefront and admin dashboard with Uploadthing image management and PWA support.",
+    tags: ["Next.js 15", "TypeScript", "Prisma", "Zustand", "Uploadthing"],
     image: "https://framerusercontent.com/images/z9OqV4u4eNKy1lUREVgOWq7XoA.jpeg",
   },
   {
