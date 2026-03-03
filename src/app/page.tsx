@@ -7,6 +7,9 @@ import { WorkCard } from "@/components/work-card";
 import { CopyEmail } from "@/components/copy-email";
 import { Footer } from "@/components/footer";
 
+import heroImg from "@/assets/david-pic-1.png";
+import aboutImg from "@/assets/david-pic-2.png";
+
 export default function HomePage() {
   return (
     <div className="animate-page-in">
@@ -14,9 +17,15 @@ export default function HomePage() {
       <header className="relative min-h-screen flex flex-col justify-between px-6 md:px-12 pt-28 md:pt-32 pb-12 md:pb-16">
         {/* Large avatar top-right */}
         <div className="absolute top-28 md:top-36 right-6 md:right-12 w-[100px] md:w-[clamp(120px,14vw,200px)] h-[100px] md:h-[clamp(120px,14vw,200px)] rounded-full overflow-hidden bg-card opacity-0 animate-fade-in [animation-delay:0.3s] [animation-fill-mode:forwards] z-10">
-          <div className="w-full h-full flex items-center justify-center text-5xl font-extrabold text-foreground/[0.08]">
-            OD
-          </div>
+          <figure className="w-full h-full flex items-center justify-center text-5xl font-extrabold text-foreground/[0.08]">
+            <Image
+              src={heroImg}
+              alt="Avatar"
+              width={400}
+              height={400}
+              className="w-full h-full object-cover"
+            />
+          </figure>
         </div>
 
         {/* Massive name */}
@@ -69,7 +78,7 @@ export default function HomePage() {
           <Reveal delay={200}>
             <div className="w-full aspect-[4/5] rounded-2xl overflow-hidden bg-card">
               <Image
-                src="https://framerusercontent.com/images/obb3zqFbOI0plXvmcRLAGwYDM.jpeg"
+                src={aboutImg}
                 alt="About"
                 width={600}
                 height={750}

@@ -6,7 +6,7 @@ export const SITE = {
   phone: "+234 916 6331 550",
   location: "Nigeria",
   title: "Software Engineer, Designer & Product Thinker",
-  bio: "Hello, I am a software engineer, designer & product thinker. A curious builder and lifelong tinkerer \u2014 based in Nigeria, working remote. Let\u2019s create!",
+  bio: "Hello, I am a software engineer, designer & product thinker. A curious builder and lifelong tinkerer based in Nigeria, working remote. Let\u2019s create!",
   about: [
     "I build digital experiences for businesses and communities worldwide, using modern technologies across the full stack. I thrive at the intersection of code, creativity, and curiosity.",
     "I\u2019m dedicated to crafting beautiful and highly functional products that seamlessly align with my clients\u2019 unique needs and long-term goals.",
@@ -17,7 +17,7 @@ export const SITE = {
   ],
   social: {
     linkedin: "https://linkedin.com/in/orisabiyi",
-    twitter: "https://twitter.com/orisabiyi",
+    twitter: "https://twitter.com/DevOrisabiyi",
     github: "https://github.com/orisabiyi",
   },
   portfolio: "https://orisabiyi-lab.vercel.app",
