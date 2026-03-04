@@ -38,13 +38,13 @@ export default async function ProjectPage({ params }: Props) {
         </Link>
 
         <Reveal>
-          <div className="w-full aspect-video rounded-2xl overflow-hidden mb-12 bg-card">
+          <div className="w-full aspect-video rounded-2xl overflow-hidden mb-12 bg-card flex items-center justify-center">
             <Image
               src={project.image}
               alt={project.title}
               width={1200}
               height={675}
-              className="w-full h-full object-cover"
+              className="w-full h-full inline-block object-fit"
               priority
             />
           </div>
@@ -91,6 +91,24 @@ export default async function ProjectPage({ params }: Props) {
             ))}
           </div>
         </Reveal>
+
+        {project.gallery && project.gallery.length > 0 && (
+          <Reveal delay={300}>
+            <div className="flex flex-col gap-4 mt-16">
+              {project.gallery.map((img, i) => (
+                <div key={i} className="w-full rounded-2xl overflow-hidden bg-card">
+                  <Image
+                    src={img}
+                    alt={`${project.title} screenshot ${i + 1}`}
+                    width={1200}
+                    height={675}
+                    className="w-full h-auto object-cover"
+                  />
+                </div>
+              ))}
+            </div>
+          </Reveal>
+        )}
       </section>
       <Footer />
     </div>

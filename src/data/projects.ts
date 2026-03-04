@@ -1,3 +1,9 @@
+import sloMuse1 from "@/assets/projects/slo-muse-1.jpg";
+import sloMuse2 from "@/assets/projects/slo-muse-2.jpg";
+import sloMuse3 from "@/assets/projects/slo-muse-3.jpg";
+
+import type { StaticImageData } from "next/image";
+
 export interface Project {
   slug: string;
   title: string;
@@ -5,8 +11,8 @@ export interface Project {
   year: string;
   description: string;
   tags: string[];
-  image: string;
-  gallery?: string[];
+  image: StaticImageData | string;
+  gallery?: StaticImageData[];
 }
 
 export const projects: Project[] = [
@@ -17,11 +23,11 @@ export const projects: Project[] = [
     year: "2024",
     description: "A luxury e-commerce platform for premium loungewear. Built with Next.js 15, TypeScript, Prisma ORM, and Zustand. Features a full customer storefront and admin dashboard with Uploadthing image management and PWA support.",
     tags: ["Next.js 15", "TypeScript", "Prisma", "Zustand", "Uploadthing"],
-    image: "https://framerusercontent.com/images/z9OqV4u4eNKy1lUREVgOWq7XoA.jpeg",
+    image: sloMuse1,
     gallery: [
-      "/projects/slo-muse-1.png",
-      "/projects/slo-muse-2.png",
-      "/projects/slo-muse-3.png",
+      sloMuse1,
+      sloMuse2,
+      sloMuse3,
     ],
   },
   {
