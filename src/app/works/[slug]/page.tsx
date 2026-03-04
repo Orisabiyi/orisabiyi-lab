@@ -92,6 +92,22 @@ export default async function ProjectPage({ params }: Props) {
           </div>
         </Reveal>
 
+        {project.link && (
+          <Reveal delay={300}>
+            <Link
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-foreground text-background px-7 py-3.5 rounded-full text-sm font-semibold mt-10 hover:scale-[0.97] hover:opacity-85 transition-all"
+            >
+              View Live Project
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M7 17L17 7M17 7H7M17 7V17" />
+              </svg>
+            </Link>
+          </Reveal>
+        )}
+
         {project.gallery && project.gallery.length > 0 && (
           <Reveal delay={300}>
             <div className="flex flex-col gap-4 mt-16">
@@ -111,6 +127,6 @@ export default async function ProjectPage({ params }: Props) {
         )}
       </section>
       <Footer />
-    </div>
+    </div >
   );
 }

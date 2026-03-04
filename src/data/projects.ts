@@ -11,6 +11,7 @@ export interface Project {
   year: string;
   description: string;
   tags: string[];
+  link?: string;
   image: StaticImageData | string;
   gallery?: StaticImageData[];
 }
@@ -23,6 +24,7 @@ export const projects: Project[] = [
     year: "2024",
     description: "A luxury e-commerce platform for premium loungewear. Built with Next.js 15, TypeScript, Prisma ORM, and Zustand. Features a full customer storefront and admin dashboard with Uploadthing image management and PWA support.",
     tags: ["Next.js 15", "TypeScript", "Prisma", "Zustand", "Uploadthing"],
+    link: "https://slomusebrand.com",
     image: sloMuse1,
     gallery: [
       sloMuse1,
