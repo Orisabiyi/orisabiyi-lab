@@ -6,6 +6,7 @@ export interface Project {
   description: string;
   tags: string[];
   image: string;
+  gallery?: string[];
 }
 
 export const projects: Project[] = [
@@ -17,6 +18,11 @@ export const projects: Project[] = [
     description: "A luxury e-commerce platform for premium loungewear. Built with Next.js 15, TypeScript, Prisma ORM, and Zustand. Features a full customer storefront and admin dashboard with Uploadthing image management and PWA support.",
     tags: ["Next.js 15", "TypeScript", "Prisma", "Zustand", "Uploadthing"],
     image: "https://framerusercontent.com/images/z9OqV4u4eNKy1lUREVgOWq7XoA.jpeg",
+    gallery: [
+      "/projects/slo-muse-1.png",
+      "/projects/slo-muse-2.png",
+      "/projects/slo-muse-3.png",
+    ],
   },
   {
     slug: "orion",
