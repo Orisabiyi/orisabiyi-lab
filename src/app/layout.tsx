@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Nav } from "@/components/nav";
 import "./globals.css";
+import { CustomCursor } from "@/components/custom-cursor";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -24,6 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.variable}>
       <body className="font-sans antialiased">
+        <CustomCursor />
         <Nav />
         <main>{children}</main>
       </body>
