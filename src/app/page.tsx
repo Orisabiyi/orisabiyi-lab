@@ -9,6 +9,7 @@ import { Footer } from "@/components/footer";
 
 import heroImg from "@/assets/david-pic-1.png";
 import aboutImg from "@/assets/david-pic-2.png";
+import Link from "next/link";
 
 export default function HomePage() {
   return (
@@ -63,28 +64,43 @@ export default function HomePage() {
       {/* ===== ABOUT PREVIEW ===== */}
       <section className="px-6 md:px-12 pb-20">
         <Reveal>
-          <SectionHeader label="about." href="/about" />
-        </Reveal>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-          <div>
-            {SITE.about.map((text, i) => (
-              <Reveal key={i} delay={i * 100}>
-                <p className="text-base font-normal leading-relaxed text-dim mt-5 first:mt-0">
-                  {text}
-                </p>
-              </Reveal>
-            ))}
+          <div className="flex items-center justify-between pb-4 mb-12 border-b border-border">
+            <span className="text-xs font-semibold tracking-wider lowercase text-muted">
+              about.
+            </span>
+            <Link
+              href="/about"
+              className="text-xs font-medium text-foreground px-5 py-2.5 rounded-full border border-border hover:bg-card transition-colors"
+            >
+              Show More
+            </Link>
           </div>
-          <Reveal delay={200}>
-            <div className="w-full aspect-[4/5] rounded-2xl overflow-hidden bg-card">
+        </Reveal>
+
+        {/* Large justified paragraph */}
+        <Reveal>
+          <p className="text-3xl font-normal leading-[1.35] text-foreground w-1/2 mb-16">
+            {SITE.about[0]}
+          </p>
+        </Reveal>
+
+        {/* Image + second text side by side */}
+        <div className="grid grid-cols-1 md:grid-cols-[1fr_1fr] gap-8 md:gap-12 items-center">
+          <Reveal className="self-end">
+            <div className="w-full max-w-[460px] mx-auto md:mx-0 md:ml-auto aspect-[3/4] rounded-none overflow-hidden">
               <Image
                 src={aboutImg}
                 alt="About"
-                width={600}
-                height={750}
+                width={460}
+                height={613}
                 className="w-full h-full object-cover"
               />
             </div>
+          </Reveal>
+          <Reveal delay={100}>
+            <p className="text-sm md:text-[15px] lg:text-lg font-normal leading-relaxed text-foreground text-justify lg:text-left max-w-[340px] md:mr-auto">
+              {SITE.about[1]}
+            </p>
           </Reveal>
         </div>
       </section>
