@@ -33,12 +33,14 @@ export const projects: Project[] = [
     ],
   },
   {
-    slug: "orion",
-    title: "Orion",
-    category: "AI Agent",
+    slug: "syntheos",
+    title: "Syntheos",
+    category: "AI / Social",
     year: "2024",
-    description: "A Google Sheets agent powered by Gemini AI with a chat-first interface. Enables natural language database queries, intelligent calculation, and sheet automation with smart API rate limiting.",
-    tags: ["Gemini AI", "Google Sheets", "NLP", "Chat UI"],
+    description:
+      "Hackathon-winning AI tool that optimizes social media posts for better engagement. Analyzes content using Gemini AI and provides actionable suggestions for content creators and marketers.",
+    tags: ["React", "Gemini AI", "Firebase", "Tailwind CSS"],
+    link: "https://syntheos.vercel.app",
     image: "https://framerusercontent.com/images/Pl6igXP6A2U3lc1GgSf66XHwWk.png",
   },
   {
@@ -48,15 +50,18 @@ export const projects: Project[] = [
     year: "2023",
     description: "An AI-powered receipt scanner that extracts and categorizes expenses automatically. Uses computer vision and OCR to parse receipts, providing spending insights and financial tracking.",
     tags: ["AI/ML", "OCR", "Computer Vision", "React"],
+    link: "https://spendlenss.vercel.app",
     image: "https://framerusercontent.com/images/KYBjtE4r5mFrdBghaxkUuVzA8w.png",
   },
   {
-    slug: "documind",
-    title: "DocuMind",
-    category: "AI/ML",
+    slug: "askdocs",
+    title: "AskDocs",
+    category: "AI / NLP",
     year: "2023",
-    description: "A RAG-powered chatbot that enables intelligent document querying. Upload documents and ask questions in natural language - get accurate, context-aware answers with source citations.",
+    description:
+      "A RAG-powered chatbot for intelligent document querying. Upload documents and ask questions in natural language to get accurate, context-aware answers with source citations.",
     tags: ["RAG", "LLM", "Vector DB", "NLP"],
+    link: "https://askdcs.vercel.app",
     image: "https://framerusercontent.com/images/4fwQ3dWzqL26A6UC8Q6DpdUIwY.png",
   },
 ];
