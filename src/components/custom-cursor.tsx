@@ -5,8 +5,15 @@ import { useEffect, useState } from "react";
 export function CustomCursor() {
   const [pos, setPos] = useState({ x: -50, y: -50 });
   const [visible, setVisible] = useState(false);
+  const [isTouch, setIsTouch] = useState(false);
 
   useEffect(() => {
+    // Detect touch device
+    const touch =
+      "ontouchstart" in window || navigator.maxTouchPoints > 0;
+    setIsTouch(touch);
+    if (touch) return;
+
     const move = (e: MouseEvent) => {
       setPos({ x: e.clientX, y: e.clientY });
       setVisible(true);
@@ -25,7 +32,9 @@ export function CustomCursor() {
     };
   }, []);
 
-  const size = 35;
+  if (isTouch) return null;
+
+  const size = 28;
 
   return (
     <div
