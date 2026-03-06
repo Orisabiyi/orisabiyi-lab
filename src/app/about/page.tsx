@@ -7,6 +7,11 @@ import { ServicesMarquee } from "@/components/services-marquee";
 import { FaqSection } from "@/components/faq-section";
 import { Footer } from "@/components/footer";
 
+import image1 from "@/assets/david-pic-1.png";
+import image2 from "@/assets/david-pic-2.png";
+import image3 from "@/assets/david-pic-3.png";
+import image4 from "@/assets/david-pic-4.png";
+
 export const metadata: Metadata = {
   title: "About | Orisabiyi David",
 };
@@ -33,7 +38,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-16">
             <div className="aspect-[4/5] rounded-2xl overflow-hidden bg-card">
               <Image
-                src="https://framerusercontent.com/images/WDImWMoSvqgQtnh9zNy7Fj5aI.jpeg"
+                src={image1}
                 alt="Creative"
                 width={600}
                 height={750}
@@ -42,7 +47,7 @@ export default function AboutPage() {
             </div>
             <div className="aspect-[4/5] rounded-2xl overflow-hidden bg-card">
               <Image
-                src="https://framerusercontent.com/images/obb3zqFbOI0plXvmcRLAGwYDM.jpeg"
+                src={image2}
                 alt="Working"
                 width={600}
                 height={750}
@@ -78,7 +83,7 @@ export default function AboutPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 px-6 md:px-12 mb-20">
           <div className="rounded-2xl overflow-hidden bg-card">
             <Image
-              src="https://framerusercontent.com/images/XtsU0wisGzN85jei7k4J6dlmfZI.jpeg"
+              src={image3}
               alt=""
               width={600}
               height={800}
@@ -87,7 +92,7 @@ export default function AboutPage() {
           </div>
           <div className="rounded-2xl overflow-hidden bg-card">
             <Image
-              src="https://framerusercontent.com/images/YR26TNo3hsv0t4LlvIJsYAezJg.png"
+              src={image4}
               alt=""
               width={600}
               height={800}
