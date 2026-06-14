@@ -12,9 +12,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Orisabiyi David | Software Engineer & Designer",
+  title: "Orisabiyi David | Software Engineer",
   description:
-    "Software engineer, designer & product thinker. A curious builder and lifelong tinkerer based in Nigeria.",
+    "Software engineer with 4+ years of experience building production web applications across e-commerce, logistics, fintech, and AI.",
 };
 
 export default function RootLayout({
