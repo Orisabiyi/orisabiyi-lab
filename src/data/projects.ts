@@ -9,11 +9,13 @@ export interface Project {
   title: string;
   category: string;
   year: string;
+  role: string;
   description: string;
   tags: string[];
-  link?: string;
   image: StaticImageData | string;
   gallery?: StaticImageData[];
+  link?: string;
+  github?: string;
 }
 
 export const projects: Project[] = [
@@ -22,36 +24,36 @@ export const projects: Project[] = [
     title: "Slo Muse",
     category: "E-Commerce",
     year: "2024",
-    description: "A luxury e-commerce platform for premium loungewear. Built with Next.js 15, TypeScript, Prisma ORM, and Zustand. Features a full customer storefront and admin dashboard with Uploadthing image management and PWA support.",
+    role: "Fullstack Engineering",
+    description:
+      "A premium loungewear brand needed a full e-commerce presence — storefront, admin dashboard, and payment processing. I built the entire platform from scratch with Next.js 15 and Prisma, integrated OPay for payments, Uploadthing for image management, and added PWA support with push notifications. The admin dashboard lets the team manage products, orders, and promotions independently.",
     tags: ["Next.js 15", "TypeScript", "Prisma", "Zustand", "Uploadthing"],
-    link: "https://slomusebrand.com",
     image: sloMuse1,
-    gallery: [
-      sloMuse1,
-      sloMuse2,
-      sloMuse3,
-    ],
+    link: "https://slomusebrand.com",
   },
   {
     slug: "syntheos",
     title: "Syntheos",
     category: "AI / Social",
+    role: "Frontend & AI Integration",
     year: "2024",
     description:
-      "Hackathon-winning AI tool that optimizes social media posts for better engagement. Analyzes content using Gemini AI and provides actionable suggestions for content creators and marketers.",
+      "Built at the Brainrot Jia.Seed Hackathon — and won. Syntheos analyzes social media posts using Gemini AI and gives content creators actionable suggestions to improve engagement. I handled OAuth integration, Firebase user data persistence, and prompt optimization for the AI feedback loop. The tool processes posts in real-time and returns structured improvement recommendations.",
     tags: ["React", "Gemini AI", "Firebase", "Tailwind CSS"],
-    link: "https://syntheos.vercel.app",
-    image: "https://framerusercontent.com/images/Pl6igXP6A2U3lc1GgSf66XHwWk.png",
+    image: '',
+    link: "https://github.com/Orisabiyi/syntheos",
   },
   {
     slug: "spendlens",
     title: "SpendLens",
     category: "FinTech",
     year: "2023",
-    description: "An AI-powered receipt scanner that extracts and categorizes expenses automatically. Uses computer vision and OCR to parse receipts, providing spending insights and financial tracking.",
-    tags: ["AI/ML", "OCR", "Computer Vision", "React"],
-    link: "https://spendlenss.vercel.app",
-    image: "https://framerusercontent.com/images/KYBjtE4r5mFrdBghaxkUuVzA8w.png",
+    description:
+      "Most expense trackers require manual input. SpendLens lets you snap a photo of any receipt and automatically extracts line items, totals, and categories using Gemini Vision. Built the OCR pipeline, expense categorization logic, and a dashboard that surfaces spending patterns over time.",
+    tags: ["Next.js", "Gemini Vision", "OCR", "Neon", "Prisma"],
+    role: "Fullstack Engineering",
+    image: '',
+    link: "",
   },
   {
     slug: "askdocs",
@@ -59,9 +61,10 @@ export const projects: Project[] = [
     category: "AI / NLP",
     year: "2023",
     description:
-      "A RAG-powered chatbot for intelligent document querying. Upload documents and ask questions in natural language to get accurate, context-aware answers with source citations.",
-    tags: ["RAG", "LLM", "Vector DB", "NLP"],
-    link: "https://askdcs.vercel.app",
-    image: "https://framerusercontent.com/images/4fwQ3dWzqL26A6UC8Q6DpdUIwY.png",
+      "A RAG-powered chatbot that lets you upload documents and ask questions in plain English. I built the ingestion pipeline (PDF parsing, chunking, embedding via LangChain), vector storage with Pinecone, and a retrieval system that returns answers with source citations. Used as a case study in my Claude Ambassador application.",
+    tags: ["Next.js", "LangChain", "Pinecone", "Gemini", "PostgreSQL"],
+    role: "Fullstack Engineering & RAG Pipeline",
+    image: '',
+    link: "",
   },
 ];

@@ -10,6 +10,7 @@ import { Footer } from "@/components/footer";
 import heroImg from "@/assets/david-pic-1.png";
 import aboutImg from "@/assets/david-pic-2.png";
 import Link from "next/link";
+import { ExperienceSection } from "@/components/experience-section";
 
 export default function HomePage() {
   return (
@@ -60,6 +61,8 @@ export default function HomePage() {
           ))}
         </div>
       </section>
+
+      <ExperienceSection />
 
       {/* ===== ABOUT PREVIEW ===== */}
       <section className="px-6 md:px-12 pb-20">
