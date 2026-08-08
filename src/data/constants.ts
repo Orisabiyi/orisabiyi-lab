@@ -3,6 +3,10 @@ export const SITE = {
   email: "orisabiyidavid@gmail.com",
   title: "Engineer \u00b7 Builder \u00b7 Creator",
   bio: "Full-stack engineer. I like to understand how things work, break them apart, and build something better. Currently shipping e-commerce platforms, AI tools, and logistics infrastructure \u2014 remote by default, building for the global web.",
+  aboutLong: [
+    "I\u2019m Orisabiyi David \u2014 a software engineer with 4+ years of experience building production web applications across e-commerce, logistics, fintech, and AI. I work primarily with Next.js, TypeScript, and Node.js, and I\u2019ve shipped everything from payment integrations to routing engines to RAG pipelines.",
+    "I care about writing maintainable code, building intuitive interfaces, and understanding the business problem before writing a single line. I also run Common Chronicles \u2014 a community for builders, creatives, and storytellers sharing the real stories behind their work.",
+  ],
   social: {
     GitHub: "https://github.com/orisabiyi",
     LinkedIn: "https://linkedin.com/in/orisabiyi",

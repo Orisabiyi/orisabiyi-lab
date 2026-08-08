@@ -15,7 +15,7 @@ export function FeaturedSection() {
           public.
         </p>
         <Link
-          href="https://github.com/common-chronicles"
+          href="https://commonchronicles.live/"
           target="_blank"
           rel="noopener noreferrer"
           className="text-sm text-accent hover:underline underline-offset-2"
