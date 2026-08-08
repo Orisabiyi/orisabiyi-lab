@@ -26,17 +26,6 @@ export function Footer() {
         </nav>
         <div className="md:ml-auto text-xs opacity-60 flex flex-col md:items-end gap-1">
           <div>&copy; {new Date().getFullYear()} Orisabiyi David</div>
-          <div>
-            Built with Next.js + Tailwind &middot;{" "}
-            <Link
-              href="https://github.com/orisabiyi/orisabiyi-lab"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-riso-red transition-colors"
-            >
-              Source
-            </Link>
-          </div>
         </div>
       </div>
     </footer>

@@ -2,9 +2,7 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
-import { ArrowLeft } from "lucide-react";
 import { projects } from "@/data/projects";
-import { Reveal } from "@/components/reveal";
 import { Footer } from "@/components/footer";
 
 interface Props {
@@ -12,7 +10,7 @@ interface Props {
 }
 
 export async function generateStaticParams() {
-  return projects.map((p) => ({ slug: p.slug }));
+  return projects.map((project) => ({ slug: project.slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -30,136 +28,116 @@ export default async function ProjectPage({ params }: Props) {
 
   return (
     <div className="animate-page-in">
-      <section className="px-5 md:px-12 pt-36 pb-16">
-        <Link
-          href="/works"
-          className="inline-flex items-center gap-2 text-[13px] font-medium text-dim hover:text-foreground transition-colors mb-10"
+      {/* Back link */}
+      <Link
+        href="/works"
+        className="inline-flex items-center gap-2 text-sm font-bold hover:text-riso-red transition-colors mb-8"
+      >
+        <span className="w-6 h-6 border-2 border-ink bg-white shadow-neo-btn flex items-center justify-center text-xs">
+          &larr;
+        </span>
+        Back to Works
+      </Link>
+
+      {/* Hero image */}
+      <div className="card-neo !p-0 overflow-hidden mb-8">
+        <div className="aspect-video bg-paper">
+          <Image
+            src={project.image}
+            alt={project.title}
+            width={1200}
+            height={675}
+            className="w-full h-full object-cover"
+            priority
+          />
+        </div>
+      </div>
+
+      {/* Title + Meta */}
+      <div className="card-neo mb-6">
+        <h1
+          className="font-display font-black leading-[0.9] tracking-[-0.03em] text-[clamp(36px,6vw,80px)] mb-6"
+          style={{ fontVariationSettings: "'SOFT' 90, 'opsz' 144, 'WONK' 1" }}
         >
-          <ArrowLeft className="w-4 h-4" />
-          Back to Works
-        </Link>
+          {project.title}<span className="text-riso-red">.</span>
+        </h1>
 
-        <Reveal>
-          <div className="w-full aspect-video rounded-2xl overflow-hidden mb-12 bg-card">
-            <Image
-              src={project.image}
-              alt={project.title}
-              width={1200}
-              height={675}
-              className="w-full h-full object-cover"
-              priority
-            />
-          </div>
-        </Reveal>
-
-        <Reveal delay={100}>
-          <h1 className="font-black uppercase text-[clamp(36px,6vw,80px)] leading-[0.95] tracking-[-0.03em] text-foreground mb-7">
-            {project.title}
-          </h1>
-        </Reveal>
-
-        <Reveal delay={150}>
-          <div className="flex flex-wrap gap-8 md:gap-10 pb-7 mb-10 border-b border-border">
-            {[
-              { label: "Category", value: project.category },
-              { label: "Year", value: project.year },
-              { label: "Role", value: project.role },
-            ].map((meta) => (
-              <div key={meta.label} className="flex flex-col gap-1">
-                <span className="text-[10px] font-semibold tracking-widest uppercase text-muted">
-                  {meta.label}
-                </span>
-                <span className="text-sm text-dim">{meta.value}</span>
-              </div>
-            ))}
-          </div>
-        </Reveal>
-
-        <Reveal delay={200}>
-          <p className="text-[17px] leading-relaxed text-dim max-w-[640px] mb-10">
-            {project.description}
-          </p>
-        </Reveal>
-
-        <Reveal delay={250}>
-          <div className="flex gap-2 flex-wrap">
-            {project.tags.map((tag) => (
-              <span
-                key={tag}
-                className="px-4 py-2 rounded-full border border-border text-xs font-medium text-dim"
-              >
-                {tag}
-              </span>
-            ))}
-          </div>
-        </Reveal>
-
-        <Reveal delay={300}>
-          <div className="flex gap-3 mt-10 flex-wrap">
-            {project.link && (
-              <Link
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-foreground text-background px-7 py-3.5 rounded-full text-sm font-semibold hover:scale-[0.97] hover:opacity-85 transition-all"
-              >
-                View Live
-                <svg
-                  width="12"
-                  height="12"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                >
-                  <path d="M7 17L17 7M17 7H7M17 7V17" />
-                </svg>
-              </Link>
-            )}
-            {project.github && (
-              <Link
-                href={project.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 border border-border text-foreground px-7 py-3.5 rounded-full text-sm font-medium hover:bg-card transition-colors"
-              >
-                Source Code
-                <svg
-                  width="14"
-                  height="14"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                >
-                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
-                </svg>
-              </Link>
-            )}
-          </div>
-        </Reveal>
-
-        {project.gallery && project.gallery.length > 0 && (
-          <Reveal delay={350}>
-            <div className="flex flex-col gap-4 mt-16">
-              {project.gallery.map((img, i) => (
-                <div
-                  key={i}
-                  className="w-full rounded-2xl overflow-hidden bg-card"
-                >
-                  <Image
-                    src={img}
-                    alt={`${project.title} screenshot ${i + 1}`}
-                    width={1200}
-                    height={675}
-                    className="w-full h-auto object-cover"
-                  />
-                </div>
-              ))}
+        {/* Meta row */}
+        <div className="grid grid-cols-3 gap-4 border-t-4 border-ink pt-6 mb-8">
+          {[
+            { label: "Category", value: project.category },
+            { label: "Year", value: project.year },
+            { label: "Role", value: project.role },
+          ].map((meta) => (
+            <div key={meta.label}>
+              <p className="text-xs font-bold uppercase tracking-widest opacity-60 mb-1">
+                {meta.label}
+              </p>
+              <p className="text-sm font-semibold">{meta.value}</p>
             </div>
-          </Reveal>
-        )}
-      </section>
+          ))}
+        </div>
+
+        {/* Description */}
+        <p className="text-base md:text-lg leading-relaxed opacity-75 max-w-[640px] mb-8">
+          {project.description}
+        </p>
+
+        {/* Tags */}
+        <div className="flex flex-wrap gap-2 mb-8">
+          {project.tags.map((tag) => (
+            <span
+              key={tag}
+              className="text-xs font-bold px-3 py-1.5 border-2 border-ink bg-paper"
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+
+        {/* Action buttons */}
+        <div className="flex gap-3 flex-wrap">
+          {project.link && (
+            <Link
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-neo bg-riso-red"
+            >
+              View Live &rarr;
+            </Link>
+          )}
+          {project.github && (
+            <Link
+              href={project.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-neo bg-white"
+            >
+              Source Code &rarr;
+            </Link>
+          )}
+        </div>
+      </div>
+
+      {/* Gallery */}
+      {project.gallery && project.gallery.length > 0 && (
+        <div className="space-y-6">
+          <h3 className="text-xl font-black">Screenshots</h3>
+          {project.gallery.map((img, i) => (
+            <div key={i} className="card-neo !p-0 overflow-hidden">
+              <Image
+                src={img}
+                alt={`${project.title} screenshot ${i + 1}`}
+                width={1200}
+                height={675}
+                className="w-full h-auto object-cover"
+              />
+            </div>
+          ))}
+        </div>
+      )}
+
       <Footer />
     </div>
   );
