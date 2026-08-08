@@ -1,6 +1,6 @@
-import sloMuse1 from "@/assets/projects/slo-muse-1.jpg";
-import sloMuse2 from "@/assets/projects/slo-muse-2.jpg";
-import sloMuse3 from "@/assets/projects/slo-muse-3.jpg";
+import sloMuse1 from "@/assets/projects/slo-muse/slo-muse-1.jpg";
+// import sloMuse2 from "@/assets/projects/slo-muse/slo-muse-2.jpg";
+// import sloMuse3 from "@/assets/projects/slo-muse/slo-muse-3.jpg";
 
 import type { StaticImageData } from "next/image";
 

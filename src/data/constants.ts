@@ -4,8 +4,8 @@ export const SITE = {
   title: "Engineer \u00b7 Builder \u00b7 Creator",
   bio: "Full-stack engineer. I like to understand how things work, break them apart, and build something better. Currently shipping e-commerce platforms, AI tools, and logistics infrastructure \u2014 remote by default, building for the global web.",
   aboutLong: [
-    "I\u2019m Orisabiyi David \u2014 a software engineer with 4+ years of experience building production web applications across e-commerce, logistics, fintech, and AI. I work primarily with Next.js, TypeScript, and Node.js, and I\u2019ve shipped everything from payment integrations to routing engines to RAG pipelines.",
-    "I care about writing maintainable code, building intuitive interfaces, and understanding the business problem before writing a single line. I also run Common Chronicles \u2014 a community for builders, creatives, and storytellers sharing the real stories behind their work.",
+    "I\u2019m Orisabiyi David. I build things that work in production not just in demos. Over 4+ years I\u2019ve shipped a logistics routing engine using self-hosted OSRM with real traffic data and road constraints, built e-commerce platforms end-to-end from storefront to admin dashboard, and won a hackathon building an AI content optimizer in under 48 hours.",
+    "I don\u2019t pick the trendy tool \u2014 I pick the right one. I read the business problem before I read the docs. And I ship consistently, whether it\u2019s a payment flow that handles five gateways or a RAG pipeline that actually returns useful answers. I also run Common Chronicles, a community for builders who make things and tell honest stories about it.",
   ],
   social: {
     GitHub: "https://github.com/orisabiyi",
