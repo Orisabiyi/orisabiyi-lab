@@ -28,7 +28,6 @@ export default async function ProjectPage({ params }: Props) {
 
   return (
     <div className="animate-page-in">
-      {/* Back link */}
       <Link
         href="/works"
         className="inline-flex items-center gap-2 text-sm font-bold hover:text-riso-red transition-colors mb-8"
@@ -39,7 +38,6 @@ export default async function ProjectPage({ params }: Props) {
         Back to Works
       </Link>
 
-      {/* Hero image */}
       <div className="card-neo !p-0 overflow-hidden mb-8">
         <div className="aspect-video bg-paper">
           <Image
@@ -53,7 +51,6 @@ export default async function ProjectPage({ params }: Props) {
         </div>
       </div>
 
-      {/* Title + Meta */}
       <div className="card-neo mb-6">
         <h1
           className="font-display font-black leading-[0.9] tracking-[-0.03em] text-[clamp(36px,6vw,80px)] mb-6"
@@ -62,7 +59,6 @@ export default async function ProjectPage({ params }: Props) {
           {project.title}<span className="text-riso-red">.</span>
         </h1>
 
-        {/* Meta row */}
         <div className="grid grid-cols-3 gap-4 border-t-4 border-ink pt-6 mb-8">
           {[
             { label: "Category", value: project.category },
@@ -78,12 +74,10 @@ export default async function ProjectPage({ params }: Props) {
           ))}
         </div>
 
-        {/* Description */}
         <p className="text-base md:text-lg leading-relaxed opacity-75 max-w-[640px] mb-8">
           {project.description}
         </p>
 
-        {/* Tags */}
         <div className="flex flex-wrap gap-2 mb-8">
           {project.tags.map((tag) => (
             <span
@@ -95,7 +89,6 @@ export default async function ProjectPage({ params }: Props) {
           ))}
         </div>
 
-        {/* Action buttons */}
         <div className="flex gap-3 flex-wrap">
           {project.link && (
             <Link
@@ -120,12 +113,11 @@ export default async function ProjectPage({ params }: Props) {
         </div>
       </div>
 
-      {/* Gallery */}
       {project.gallery && project.gallery.length > 0 && (
         <div className="space-y-6">
           <h3 className="text-xl font-black">Screenshots</h3>
           {project.gallery.map((img, i) => (
-            <div key={i} className="card-neo !p-0 overflow-hidden">
+            <figure key={i} className="card-neo !p-0 overflow-hidden">
               <Image
                 src={img}
                 alt={`${project.title} screenshot ${i + 1}`}
@@ -133,7 +125,7 @@ export default async function ProjectPage({ params }: Props) {
                 height={675}
                 className="w-full h-auto object-cover"
               />
-            </div>
+            </figure>
           ))}
         </div>
       )}

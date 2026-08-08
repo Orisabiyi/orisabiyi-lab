@@ -38,8 +38,7 @@ export default function WorksPage() {
             href={`/works/${project.slug}`}
             className="group card-neo !p-0 overflow-hidden block"
           >
-            {/* Image */}
-            <div className="aspect-video bg-paper border-b-4 border-ink overflow-hidden">
+            <figure className="aspect-video bg-paper border-b-4 border-ink overflow-hidden">
               <Image
                 src={project.image}
                 alt={project.title}
@@ -47,9 +46,8 @@ export default function WorksPage() {
                 height={394}
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
               />
-            </div>
+            </figure>
 
-            {/* Info */}
             <div className="p-6">
               <div className="flex items-start justify-between gap-4 mb-2">
                 <h2 className="text-xl font-black group-hover:text-riso-red transition-colors">

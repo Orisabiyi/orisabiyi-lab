@@ -4,7 +4,6 @@ import Link from "next/link";
 import { Github, Linkedin, Mail, Twitter } from "lucide-react";
 import { SITE, experience, stats, techStack, blogPosts } from "@/data/constants";
 import { projects } from "@/data/projects";
-import { Reveal } from "@/components/reveal";
 import { Footer } from "@/components/footer";
 
 const socials = [
@@ -42,21 +41,18 @@ export default function HomePage() {
               {SITE.bio}
             </p>
           </div>
-          <div className="flex-shrink-0 mx-auto md:mx-0 mb-6 md:mb-0">
+          <figure className="flex-shrink-0 mx-auto md:mx-0 mb-6 md:mb-0">
             <Image src={avatarImg} alt="Orisabiyi David" className="w-32 h-32 md:w-40 md:h-40 border-4 border-ink shadow-neo object-cover" />
-          </div>
+          </figure>
         </div>
       </section>
 
-      {/* ===== DIVIDER ===== */}
       <div className="relative mb-12 md:mb-16">
         <div className="border-t-2 border-ink" />
         <div className="absolute -top-[7px] left-0 w-3 h-3 bg-riso-red border-2 border-ink" />
       </div>
 
-      {/* ===== BENTO GRID ===== */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
-        {/* ── Connect ── */}
         <div className="card-neo !bg-neo-yellow">
           <h3 className="text-2xl font-black mb-4">Connect</h3>
           <ul className="space-y-3">
