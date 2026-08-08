@@ -2,9 +2,10 @@ import avatarImg from "@/assets/david-pic-1.png";
 import Image from "next/image";
 import Link from "next/link";
 import { Github, Linkedin, Mail, Twitter } from "lucide-react";
-import { SITE, experience, stats, techStack, blogPosts } from "@/data/constants";
+import { SITE, experience, stats, techStack, } from "@/data/constants";
 import { projects } from "@/data/projects";
 import { Footer } from "@/components/footer";
+import { BlogCard } from "@/components/blog-card";
 
 const socials = [
   { label: "GitHub", href: SITE.social.GitHub, icon: Github },
@@ -18,7 +19,6 @@ export default function HomePage() {
 
   return (
     <div className="animate-page-in">
-      {/* ===== HERO ===== */}
       <section className="mb-12 md:mb-16">
         <div className="flex flex-col-reverse md:flex-row md:items-start md:gap-10">
           <div className="flex-1 min-w-0">
@@ -101,34 +101,7 @@ export default function HomePage() {
         </div>
 
         {/* ── Blog ── */}
-        <div className="md:col-span-2 card-neo">
-          <p className="text-xs font-bold uppercase tracking-widest opacity-60 mb-2">
-            Writing
-          </p>
-          <h3 className="text-2xl font-black mb-1">Blog</h3>
-          <p className="text-lg mb-6 opacity-75">
-            Thoughts on engineering, building products, and lessons from
-            shipping.
-          </p>
-
-          <div className="space-y-3 mb-6">
-            {blogPosts.map((post, i) => (
-              <div key={i} className="border-l-4 border-ink pl-4">
-                <Link
-                  href={post.href}
-                  className="font-bold text-lg hover:underline leading-tight block"
-                >
-                  {post.title}
-                </Link>
-                <p className="text-sm opacity-75 mt-1">{post.date}</p>
-              </div>
-            ))}
-          </div>
-
-          <Link href="/blog" className="btn-neo bg-white">
-            View All Posts &rarr;
-          </Link>
-        </div >
+        <BlogCard />
 
         {/* ── Projects Preview ── */}
         < div className="card-neo flex flex-col text-center" >
