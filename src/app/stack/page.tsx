@@ -3,9 +3,15 @@ import { techStack } from "@/data/constants";
 import { Footer } from "@/components/footer";
 
 export const metadata: Metadata = {
-  title: "Stack | Orisabiyi David",
+  title: "Stack",
+  description:
+    "Technologies in active production use — TypeScript, Next.js, Node.js, PostgreSQL, Prisma, LangChain, Pinecone, Cloudflare Workers, and more.",
+  openGraph: {
+    title: "Stack | Orisabiyi David",
+    description:
+      "Technologies in active production use — TypeScript, Next.js, Node.js, PostgreSQL, Prisma, LangChain, and more.",
+  },
 };
-
 export default function StackPage() {
   const totalTech = Object.values(techStack).flat().length;
 
@@ -61,8 +67,8 @@ export default function StackPage() {
                   <span
                     key={item.name}
                     className={`text-sm font-bold px-3 py-1.5 border-2 border-ink ${isLearning
-                        ? "bg-blueprint text-white"
-                        : "bg-paper"
+                      ? "bg-blueprint text-white"
+                      : "bg-paper"
                       }`}
                   >
                     {item.name}

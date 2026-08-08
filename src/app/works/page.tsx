@@ -5,7 +5,14 @@ import { projects } from "@/data/projects";
 import { Footer } from "@/components/footer";
 
 export const metadata: Metadata = {
-  title: "Works | Orisabiyi David",
+  title: "Works",
+  description:
+    "Selected projects shipped to production — e-commerce platforms, AI systems, fintech tools, and logistics infrastructure. Built with Next.js, TypeScript, and Node.js.",
+  openGraph: {
+    title: "Works | Orisabiyi David",
+    description:
+      "Selected projects shipped to production — e-commerce platforms, AI systems, fintech tools, and logistics infrastructure.",
+  },
 };
 
 export default function WorksPage() {

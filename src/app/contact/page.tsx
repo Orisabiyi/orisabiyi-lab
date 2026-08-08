@@ -1,6 +1,5 @@
 "use client";
 
-import type { Metadata } from "next";
 import { SITE } from "@/data/constants";
 import { Github, Linkedin, Mail, Twitter } from "lucide-react";
 import { Footer } from "@/components/footer";

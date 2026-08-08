@@ -15,15 +15,23 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const project = projects.find((p) => p.slug === slug);
+  const project = projects.find((project) => project.slug === slug);
+
+  if (!project) return { title: "Not Found" };
+
   return {
-    title: project ? `${project.title} | Orisabiyi David` : "Not Found",
+    title: project.title,
+    description: project.description.slice(0, 160),
+    openGraph: {
+      title: `${project.title} | Orisabiyi David`,
+      description: project.description.slice(0, 160),
+    },
   };
 }
 
 export default async function ProjectPage({ params }: Props) {
   const { slug } = await params;
-  const project = projects.find((p) => p.slug === slug);
+  const project = projects.find((project) => project.slug === slug);
   if (!project) notFound();
 
   return (

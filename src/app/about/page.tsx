@@ -4,7 +4,14 @@ import { Footer } from "@/components/footer";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "About | Orisabiyi David",
+  title: "About",
+  description:
+    "Software engineer with 4+ years shipping production web applications. Currently a Senior Frontend Engineer building logistics infrastructure. Open to remote opportunities worldwide.",
+  openGraph: {
+    title: "About | Orisabiyi David",
+    description:
+      "Software engineer with 4+ years shipping production web applications. Open to remote opportunities worldwide.",
+  },
 };
 
 export default function AboutPage() {

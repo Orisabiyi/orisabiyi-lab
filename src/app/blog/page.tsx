@@ -4,7 +4,14 @@ import { Footer } from "@/components/footer";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Blog | Orisabiyi David",
+  title: "Blog",
+  description:
+    "Writing on software engineering, building products, AI systems, and lessons from shipping production applications. Published on Medium.",
+  openGraph: {
+    title: "Blog | Orisabiyi David",
+    description:
+      "Writing on software engineering, building products, AI systems, and lessons from shipping production applications.",
+  },
 };
 
 export default async function BlogPage() {
