@@ -1,62 +1,112 @@
 export const SITE = {
   name: "Orisabiyi David",
-  firstName: "ORISABIYI",
-  lastName: "DAVID",
   email: "orisabiyidavid@gmail.com",
-  phone: "+234 916 6331 550",
-  location: "Nigeria",
-  title: "Software Engineer, Designer & Product Thinker",
-  // bio: "Hello, I\u2019m a software engineer, designer & product thinker. A curious builder, lifelong learner and problem solver. I\u2019m remote by default, solving problems worth solving. Let's create!",
-  bio: "Hello, I'm a fullstack engineer who likes to understand how things work, break them apart, and build something better. Remote by default, building for the global web. Let's create!",
-  about: [
-    "I build software that solves real problems from logistics routing engines to AI-powered tools using modern technologies across the full stack.",
-    "I care about clean architecture, thoughtful interfaces, and shipping things that actually work in production.",
-  ],
-  aboutLong: [
-    "I am Orisabiyi David, a curious builder, thoughtful designer and lifelong tinkerer. I build digital products using modern tools like Next.js, TypeScript, Node.js, and Python. From e-commerce platforms to AI-powered tools \u2014 I bring ideas to life with clean code and deep focus on user experience.",
-    "I care deeply about clean architecture, intuitive design, and writing performant, maintainable code. While I continue to sharpen my full-stack engineering skills, I\u2019m also exploring AI and product development \u2014 always staying curious. I also run Common Chronicles \u2014 a community for builders, creatives, and storytellers.",
-  ],
+  title: "Engineer \u00b7 Builder \u00b7 Creator",
+  bio: "Full-stack engineer. I like to understand how things work, break them apart, and build something better. Currently shipping e-commerce platforms, AI tools, and logistics infrastructure \u2014 remote by default, building for the global web.",
   social: {
-    linkedin: "https://linkedin.com/in/orisabiyi",
-    twitter: "https://twitter.com/DevOrisabiyi",
-    github: "https://github.com/orisabiyi",
+    GitHub: "https://github.com/orisabiyi",
+    LinkedIn: "https://linkedin.com/in/orisabiyi",
+    Twitter: "https://x.com/DevOrisabiyi",
+    Medium: "https://medium.com/@Orisabiyidavid",
+    Email: "mailto:orisabiyidavid@gmail.com",
   },
-  portfolio: "https://orisabiyi-lab.vercel.app",
 } as const;
 
-export const services = [
-  "FRONTEND ENGINEERING",
-  "BACKEND ENGINEERING",
-  "UI/UX DESIGN",
-  "AI INTEGRATION",
-  "PRODUCT THINKING",
+export const experience = [
+  {
+    org: "Fez Delivery",
+    url: "https://fezdelivery.co",
+    role: "Senior Frontend Engineer",
+    description:
+      "Leading frontend architecture for a logistics platform serving businesses across Nigeria. Built a route optimization microservice with self-hosted OSRM and traffic-weighted heuristics.",
+  },
+  {
+    org: "Common Chronicles",
+    url: "https://github.com/common-chronicles",
+    role: "Founder & Builder",
+    description:
+      "A community for builders, creatives, and storytellers who make things and tell real stories. Built the content automation bot (Notion + Discord + Groq AI) and organized community events.",
+  },
+  {
+    org: "Freelance / Contract",
+    role: "Fullstack Developer",
+    description:
+      "Shipped products across e-commerce, fintech, and AI. Integrated 5 payment gateways (Paystack, OPay, Interswitch, Nomba, Stripe), built admin dashboards, and delivered client projects end-to-end.",
+  },
 ] as const;
 
-export const techStack = [
-  "Next.js",
-  "React",
-  "TypeScript",
-  "Node.js",
-  "Python",
-  "ExpressJS",
-  "Fastify",
+export const stats = [
+  { number: "4+", label: "Years Shipping", href: "/about" },
+  { number: "10+", label: "Projects Delivered", href: "/works" },
+  { number: "5", label: "Payment Gateways", href: "/works" },
+  { number: "1", label: "Hackathon Won", href: "/works/syntheos" },
 ] as const;
 
-export const faqs = [
+export const techStack = {
+  "Programming Languages": [
+    { name: "TypeScript", active: true },
+    { name: "JavaScript", active: true },
+    { name: "Python", active: true },
+    { name: "C#", learning: true },
+  ],
+  "Frameworks & Libraries": [
+    { name: "Next.js", active: true },
+    { name: "React", active: true },
+    { name: "React Native", active: true },
+    { name: "Node.js", active: true },
+    { name: "Fastify", active: true },
+    { name: "Express", active: true },
+    { name: "Hono", active: true },
+    { name: "Framer Motion", active: true },
+    { name: "Tailwind CSS", active: true },
+  ],
+  "Databases & ORMs": [
+    { name: "PostgreSQL", active: true },
+    { name: "MongoDB", active: true },
+    { name: "Prisma", active: true },
+    { name: "Drizzle", active: true },
+    { name: "Neon", active: true },
+  ],
+  "AI & ML": [
+    { name: "Gemini", active: true },
+    { name: "LangChain", active: true },
+    { name: "Pinecone", active: true },
+    { name: "Groq", active: true },
+    { name: "RAG Pipelines", active: true },
+  ],
+  "Cloud & Infrastructure": [
+    { name: "Vercel", active: true },
+    { name: "Cloudflare Workers", active: true },
+    { name: "Docker", active: true },
+    { name: "Oracle Cloud", active: true },
+    { name: "GitHub Actions", active: true },
+  ],
+  "Payments": [
+    { name: "Paystack", active: true },
+    { name: "OPay", active: true },
+    { name: "Interswitch", active: true },
+    { name: "Nomba", active: true },
+    { name: "Stripe", active: true },
+  ],
+} as const;
+
+export const blogPosts = [
   {
-    question: "What is your creative design process like?",
-    answer: "I follow an iterative approach \u2014 starting with understanding your vision, then moving through wireframes, design, development, testing, and deployment. Communication stays open at every stage.",
+    title: "How I Built a Route Optimization Engine for Lagos Traffic",
+    date: "Coming soon",
+    href: "#",
+    emoji: "",
   },
   {
-    question: "What is your typical project timeline?",
-    answer: "Timelines vary by scope. A landing page might take 1-2 weeks, while a full-stack application could take 4-8 weeks. I always provide a clear timeline before we begin.",
+    title: "Winning a Hackathon with Syntheos: Lessons on Shipping Fast",
+    date: "Coming soon",
+    href: "#",
+    emoji: "",
   },
   {
-    question: "How do I get started on a project with you?",
-    answer: "Simply reach out via email or the contact form. We\u2019ll discuss your needs, timeline, and budget, then I\u2019ll put together a proposal for your review.",
-  },
-  {
-    question: "What should I do if you\u2019re fully booked?",
-    answer: "If I\u2019m at capacity, I\u2019ll let you know my earliest availability and can add you to my waitlist. I can also recommend trusted colleagues who might be a good fit.",
+    title: "Integrating 5 Payment Gateways Across Africa: What I Learned",
+    date: "Coming soon",
+    href: "#",
+    emoji: "",
   },
 ] as const;

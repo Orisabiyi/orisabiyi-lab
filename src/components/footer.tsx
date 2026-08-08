@@ -1,55 +1,42 @@
 import Link from "next/link";
-import { Reveal } from "@/components/reveal";
-import { SITE } from "@/data/constants";
+
+const alsoLinks = [
+  { href: "/about", label: "About" },
+  { href: "/stack", label: "Stack" },
+  { href: "/contact", label: "Contact" },
+];
 
 export function Footer() {
   return (
-    <footer className="px-6 md:px-12 pt-20 pb-10 border-t border-border">
-      <Reveal>
-        <p className="text-xl md:text-2xl lg:text-[32px] font-semibold leading-snug max-w-[540px] mb-7 text-foreground">
-          Curious about what we can create together? Let&apos;s bring something
-          extraordinary to life!
-        </p>
-        <Link
-          href="/contact"
-          className="inline-flex items-center gap-2 bg-foreground text-background px-7 py-3 rounded-full text-[13px] font-semibold hover:scale-[0.97] hover:opacity-85 transition-all mb-14"
-        >
-          Get in Touch
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-            <path d="M5 12h14M12 5l7 7-7 7" />
-          </svg>
-        </Link>
-      </Reveal>
-
-      <div className="flex flex-col md:flex-row justify-between md:items-end pt-7 border-t border-border gap-7">
-        <div>
-          <div className="flex gap-5">
-            {Object.entries(SITE.social).map(([name, url]) => (
-              <a
-                key={name}
-                href={url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[13px] font-medium text-dim hover:text-foreground transition-colors capitalize"
-              >
-                {name}
-              </a>
-            ))}
+    <footer className="border-t-4 border-ink bg-white mt-16">
+      <div className="max-w-6xl mx-auto px-4 md:px-8 py-6 flex flex-col md:flex-row md:items-baseline gap-4 md:gap-8">
+        <span className="text-xs uppercase tracking-widest font-bold text-riso-red">
+          Also
+        </span>
+        <nav className="flex flex-wrap gap-x-6 gap-y-2 font-semibold text-sm">
+          {alsoLinks.map(({ href, label }) => (
+            <Link
+              key={href}
+              href={href}
+              className="hover:text-riso-red transition-colors"
+            >
+              {label}
+            </Link>
+          ))}
+        </nav>
+        <div className="md:ml-auto text-xs opacity-60 flex flex-col md:items-end gap-1">
+          <div>&copy; {new Date().getFullYear()} Orisabiyi David</div>
+          <div>
+            Built with Next.js + Tailwind &middot;{" "}
+            <Link
+              href="https://github.com/orisabiyi/orisabiyi-lab"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-riso-red transition-colors"
+            >
+              Source
+            </Link>
           </div>
-          <div className="flex items-center gap-2 text-xs font-medium text-dim mt-4">
-            <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse-dot" />
-            Available For Work
-          </div>
-        </div>
-        <div className="md:text-right">
-          <p className="text-xs text-muted">
-            <a href={`mailto:${SITE.email}`} className="text-dim hover:text-foreground transition-colors">
-              {SITE.email}
-            </a>
-          </p>
-          <p className="text-xs text-muted mt-1.5">
-            All rights reserved, Orisabiyi Lab &copy;{new Date().getFullYear()}
-          </p>
         </div>
       </div>
     </footer>
