@@ -2,12 +2,6 @@ import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
 export async function POST(req: Request) {
-  console.log("SMTP_HOST:", process.env.SMTP_HOST);
-  console.log("SMTP_PORT:", process.env.SMTP_PORT);
-  console.log("SMTP_USER:", process.env.SMTP_USER);
-  console.log("SMTP_PASS length:", process.env.SMTP_PASS?.length);
-  console.log("CONTACT_EMAIL:", process.env.CONTACT_EMAIL);
-
   try {
     const { name, email, subject, message } = await req.json();
 
