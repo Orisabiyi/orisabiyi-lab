@@ -90,7 +90,7 @@ export default function HomePage() {
             </p>
 
             <Link
-              href="https://github.com/common-chronicles"
+              href="https://commonchronicles.live/"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-neo bg-riso-red"

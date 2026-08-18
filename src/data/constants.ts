@@ -2,7 +2,7 @@ export const SITE = {
   name: "Orisabiyi David",
   email: "orisabiyidavid@gmail.com",
   title: "Engineer \u00b7 Builder \u00b7 Creator",
-  bio: "Full-stack engineer. I like to understand how things work, break them apart, and build something better. I work on problems where the edge cases are harder than the happy path \u2014 payment systems that fail gracefully, routing engines that handle roads Google hasn\u2019t mapped, and AI pipelines that cite their sources. Remote by default.",
+  bio: "Software engineer. I like to understand how things work, break them apart, and build something better. I work on problems where the edge cases are harder than the happy path. Payment systems that fail gracefully, routing engines that handle roads Google hasn\u2019t mapped, and AI pipelines that cite their sources.",
   aboutLong: [
     "I\u2019m Orisabiyi David. I build things that work in production not just in demos. Over 4+ years I\u2019ve shipped a logistics routing engine using self-hosted OSRM with real traffic data and road constraints, built e-commerce platforms end-to-end from storefront to admin dashboard, and won a hackathon building an AI content optimizer in under 48 hours.",
     "I don\u2019t pick the trendy tool \u2014 I pick the right one. I read the business problem before I read the docs. And I ship consistently, whether it\u2019s a payment flow that handles five gateways or a RAG pipeline that actually returns useful answers. I also run Common Chronicles, a community for builders who make things and tell honest stories about it.",
@@ -26,7 +26,7 @@ export const experience = [
   },
   {
     org: "Common Chronicles",
-    url: "https://github.com/common-chronicles",
+    url: "https://commonchronicles.live/",
     role: "Founder & Builder",
     description:
       "A community for builders, creatives, and storytellers who make things and tell real stories. Built the content automation bot (Notion + Discord + Groq AI) and organized community events.",
