@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Nav } from "@/components/nav";
 import { CustomCursor } from "@/components/custom-cursor";
 import "./globals.css";
+import { JsonLd } from "@/components/json-ld";
 
 export const metadata: Metadata = {
   title: {
@@ -31,6 +32,9 @@ export const metadata: Metadata = {
     "hire developer",
     "portfolio",
   ],
+  verification: {
+    google: "RW-SVzKPYwN0phkr-oAz6WaXcuDV542VlcQJWUD9AbI",
+  },
   icons: {
     icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23F3EDE1'/%3E%3Crect x='0' y='82' width='100' height='18' fill='%23FF4133'/%3E%3Ctext x='50' y='66' text-anchor='middle' font-family='Georgia, serif' font-size='52' font-weight='900' fill='%230D0D0D'%3EOD%3C/text%3E%3C/svg%3E",
   },
@@ -87,6 +91,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="font-sans antialiased bg-paper text-ink">
+        <JsonLd />
         <CustomCursor />
         <Nav />
         <main className="max-w-6xl mx-auto p-4 md:p-8">{children}</main>
