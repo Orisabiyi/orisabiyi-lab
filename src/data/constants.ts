@@ -2,10 +2,11 @@ export const SITE = {
   name: "Orisabiyi David",
   email: "orisabiyidavid@gmail.com",
   title: "Engineer \u00b7 Builder \u00b7 Creator",
-  bio: "Software engineer. I like to understand how things work, break them apart, and build something better. I work on problems where the edge cases are harder than the happy path. Payment systems that fail gracefully, routing engines that handle roads Google hasn\u2019t mapped, and AI pipelines that cite their sources.",
+  bio: "Software engineer in Lagos. I like to understand how things work, break them apart, and build something better. I do my best work where the edge cases are harder than the happy path: payment flows that fail gracefully, a routing engine tuned for how Lagos traffic actually moves, and AI pipelines that cite their sources instead of guessing.",
   aboutLong: [
-    "I\u2019m Orisabiyi David. I build things that work in production not just in demos. Over 4+ years I\u2019ve shipped a logistics routing engine using self-hosted OSRM with real traffic data and road constraints, built e-commerce platforms end-to-end from storefront to admin dashboard, and won a hackathon building an AI content optimizer in under 48 hours.",
-    "I don\u2019t pick the trendy tool \u2014 I pick the right one. I read the business problem before I read the docs. And I ship consistently, whether it\u2019s a payment flow that handles five gateways or a RAG pipeline that actually returns useful answers. I also run Common Chronicles, a community for builders who make things and tell honest stories about it.",
+    "I'm Orisabiyi David, a full-stack software engineer based in Lagos. For 4+ years I've built software that has to hold up in production, not just in demos. At Fez Delivery I built a route optimization engine on self-hosted OSRM because standard map data didn't reflect how Lagos traffic actually moves, and an address flow that cut order abandonment by 30%. Before that, I shipped platforms serving 2M+ users and brought API responses down from 10 seconds to under one.",
+    "I read the business problem before I read the docs, and I only reach for the off-the-shelf answer when it actually fits. That's taken me from payment integrations across multiple gateways to RAG pipelines that cite their sources, and to a hackathon-winning AI tool built in under 48 hours.",
+    "Outside work, I run Common Chronicles, a community for builders who make things and tell honest stories about them. I write about production engineering on Medium and about everything else in my Journal. I'm open to remote roles worldwide.",
   ],
   social: {
     GitHub: "https://github.com/orisabiyi",

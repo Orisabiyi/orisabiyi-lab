@@ -35,12 +35,14 @@ export default function AboutPage() {
 
       {/* Bio card */}
       <div className="card-neo mb-6">
-        <p className="text-base md:text-lg leading-relaxed opacity-75 mb-4 max-w-[640px]">
-          {SITE.aboutLong[0]}
-        </p>
-        <p className="text-base md:text-lg leading-relaxed opacity-75 max-w-[640px]">
-          {SITE.aboutLong[1]}
-        </p>
+        {SITE.aboutLong.map((paragraph) => (
+          <p
+            key={paragraph}
+            className="text-base md:text-lg leading-relaxed opacity-75 mb-4 last:mb-0 max-w-[640px]"
+          >
+            {paragraph}
+          </p>
+        ))}
       </div>
 
       {/* Resume download */}
