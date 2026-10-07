@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
 import { projects } from "@/data/projects";
 import { Footer } from "@/components/footer";
+import { ProjectCover } from "@/components/project-cover";
 
 export const metadata: Metadata = {
   title: "Works",
@@ -26,8 +26,8 @@ export default function WorksPage() {
           Projects<span className="text-riso-red">.</span>
         </h1>
         <p className="text-base md:text-lg opacity-75 max-w-[52ch]">
-          Selected work from 2021 to present. Each project shipped to
-          production, solving real problems for real users.
+          Selected work across e-commerce, AI, and fintech. Client builds,
+          a hackathon winner, and products I designed and shipped end to end.
         </p>
       </section>
 
@@ -45,23 +45,19 @@ export default function WorksPage() {
             href={`/works/${project.slug}`}
             className="group card-neo !p-0 overflow-hidden block"
           >
-            <figure className="aspect-video bg-paper border-b-4 border-ink overflow-hidden">
-              <Image
-                src={project.image}
-                alt={project.title}
-                width={700}
-                height={394}
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-              />
-            </figure>
+            <ProjectCover
+              project={project}
+              className="border-b-4 border-ink"
+              imageClassName="group-hover:scale-[1.03] transition-transform duration-500"
+            />
 
             <div className="p-6">
               <div className="flex items-start justify-between gap-4 mb-2">
                 <h2 className="text-xl font-black group-hover:text-riso-red transition-colors">
                   {project.title}
                 </h2>
-                <span className="text-xs font-bold uppercase tracking-widest opacity-60 shrink-0 mt-1">
-                  {project.year}
+                <span className="text-[11px] font-bold uppercase tracking-widest px-2 py-0.5 border-2 border-ink bg-neo-yellow shrink-0 mt-0.5">
+                  {project.status}
                 </span>
               </div>
               <p className="text-xs font-bold uppercase tracking-widest text-riso-red mb-3">

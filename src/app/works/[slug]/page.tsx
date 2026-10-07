@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import Image from "next/image";
+import { ProjectCover } from "@/components/project-cover";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { projects } from "@/data/projects";
@@ -47,16 +48,7 @@ export default async function ProjectPage({ params }: Props) {
       </Link>
 
       <div className="card-neo !p-0 overflow-hidden mb-8">
-        <div className="aspect-video bg-paper">
-          <Image
-            src={project.image}
-            alt={project.title}
-            width={1200}
-            height={675}
-            className="w-full h-full object-cover"
-            priority
-          />
-        </div>
+        <ProjectCover project={project} size="hero" priority />
       </div>
 
       <div className="card-neo mb-6">
@@ -70,7 +62,7 @@ export default async function ProjectPage({ params }: Props) {
         <div className="grid grid-cols-3 gap-4 border-t-4 border-ink pt-6 mb-8">
           {[
             { label: "Category", value: project.category },
-            { label: "Year", value: project.year },
+            { label: "Status", value: project.status },
             { label: "Role", value: project.role },
           ].map((meta) => (
             <div key={meta.label}>
@@ -105,7 +97,7 @@ export default async function ProjectPage({ params }: Props) {
               rel="noopener noreferrer"
               className="btn-neo bg-riso-red"
             >
-              View Live &rarr;
+              {project.linkLabel ?? "View Live"} &rarr;
             </Link>
           )}
           {project.github && (
