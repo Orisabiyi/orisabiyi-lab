@@ -66,7 +66,7 @@ export const projects: Project[] = [
       "Snap a receipt or invoice and SpendLens extracts the merchant, date, line items, tax, currency, and payment method using Gemini vision, then categorizes the expense automatically. It first classifies the image and rejects anything that isn’t a receipt or invoice, and rates its confidence on every read so faded or damaged receipts don’t pass silently as clean data. Supports batch scanning of several receipts at once, editing and filtering expenses, CSV export, and an analytics dashboard with category breakdowns, top merchants, and spending trends.",
     tags: ["Next.js", "Gemini Vision", "Prisma", "PostgreSQL", "NextAuth", "Cloudinary"],
     accent: "red",
-    link: "https://spendlens-tau.vercel.app",
+    link: "https://spendlenss.vercel.app",
     github: "https://github.com/Orisabiyi/spendlens",
   },
   {
