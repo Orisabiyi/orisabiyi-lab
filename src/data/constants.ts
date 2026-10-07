@@ -76,7 +76,7 @@ export const techStack = {
     { name: "TypeScript", active: true },
     { name: "JavaScript", active: true },
     { name: "Python", active: true },
-    { name: "C#", learning: true },
+    { name: "C#", active: true },
   ],
   "Frameworks & Libraries": [
     { name: "Next.js", active: true },

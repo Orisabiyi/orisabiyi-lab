@@ -14,6 +14,9 @@ export const metadata: Metadata = {
 };
 export default function StackPage() {
   const totalTech = Object.values(techStack).flat().length;
+  const hasLearning = Object.values(techStack)
+    .flat()
+    .some((item) => "learning" in item && item.learning);
 
   return (
     <div className="animate-page-in">
@@ -40,20 +43,22 @@ export default function StackPage() {
         <div className="absolute -top-[7px] left-0 w-3 h-3 bg-riso-red border-2 border-ink" />
       </div>
 
-      {/* Legend */}
-      <div className="card-neo !bg-neo-yellow mb-6">
-        <h3 className="text-sm font-black mb-2">Legend</h3>
-        <div className="flex gap-6 text-sm font-semibold">
-          <span className="flex items-center gap-2">
-            <span className="w-3 h-3 border-2 border-ink bg-white" />
-            Actively using
-          </span>
-          <span className="flex items-center gap-2">
-            <span className="w-3 h-3 border-2 border-ink bg-blueprint" />
-            Learning
-          </span>
+      {/* Legend — only needed while something is marked as learning */}
+      {hasLearning && (
+        <div className="card-neo !bg-neo-yellow mb-6">
+          <h3 className="text-sm font-black mb-2">Legend</h3>
+          <div className="flex gap-6 text-sm font-semibold">
+            <span className="flex items-center gap-2">
+              <span className="w-3 h-3 border-2 border-ink bg-white" />
+              Actively using
+            </span>
+            <span className="flex items-center gap-2">
+              <span className="w-3 h-3 border-2 border-ink bg-blueprint" />
+              Learning
+            </span>
+          </div>
         </div>
-      </div>
+      )}
 
       {/* Stack categories */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">

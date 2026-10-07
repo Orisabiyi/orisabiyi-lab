@@ -6,6 +6,7 @@ import Link from "next/link";
 const primaryLinks = [
   { href: "/works", label: "Works" },
   { href: "/blog", label: "Blog" },
+  { href: "/journal", label: "Journal" },
   { href: "/stack", label: "Stack" },
 ];
 
