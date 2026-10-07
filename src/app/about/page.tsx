@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { SITE, experience, techStack } from "@/data/constants";
+import { SITE, techStack } from "@/data/constants";
 import { Footer } from "@/components/footer";
-import Link from "next/link";
+import { ExperienceSection } from "@/components/experience-section";
 
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Software engineer with 4+ years shipping production web applications. Currently a Senior Frontend Engineer building logistics infrastructure. Open to remote opportunities worldwide.",
+    "Software engineer with 4+ years shipping production web applications. Currently a Senior Software Engineer building logistics infrastructure. Open to remote opportunities worldwide.",
   openGraph: {
     title: "About | Orisabiyi David",
     description:
@@ -52,44 +52,17 @@ export default function AboutPage() {
               Download my CV for a full overview of my experience and skills.
             </p>
           </div>
-          <Link
+          <a
             href="/resume.pdf"
-            target="_blank"
+            download="Orisabiyi_David_CV.pdf"
             className="btn-neo bg-white shrink-0"
           >
             Download CV &darr;
-          </Link>
+          </a>
         </div>
       </div>
 
-      {/* Current Roles */}
-      <div className="card-neo mb-6">
-        <h3 className="text-2xl font-black mb-6">Current Roles</h3>
-        <div className="grid md:grid-cols-2 gap-8">
-          {experience.map((exp, i) => (
-            <div key={i}>
-              <h4 className="text-xl font-bold mb-1">
-                {'url' in exp && exp.url ? (
-                  <Link
-                    href={exp.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:underline font-bold"
-                  >
-                    {exp.org}
-                  </Link>
-                ) : (
-                  exp.org
-                )}
-              </h4>
-              <p className="font-bold text-sm uppercase tracking-wide opacity-75 mb-3">
-                {exp.role}
-              </p>
-              <p className="text-sm leading-relaxed">{exp.description}</p>
-            </div>
-          ))}
-        </div>
-      </div>
+      <ExperienceSection className="mb-6" />
 
       {/* Quick stats */}
       <div className="grid grid-cols-2 gap-4 md:gap-6 mb-6">

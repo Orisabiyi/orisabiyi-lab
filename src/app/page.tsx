@@ -2,10 +2,11 @@ import avatarImg from "@/assets/david-pic-1.png";
 import Image from "next/image";
 import Link from "next/link";
 import { Github, Linkedin, Mail, Twitter } from "lucide-react";
-import { SITE, experience, stats, techStack, } from "@/data/constants";
+import { SITE, stats, techStack } from "@/data/constants";
 import { projects } from "@/data/projects";
 import { Footer } from "@/components/footer";
 import { BlogCard } from "@/components/blog-card";
+import { ExperienceSection } from "@/components/experience-section";
 
 const socials = [
   { label: "GitHub", href: SITE.social.GitHub, icon: Github },
@@ -119,35 +120,8 @@ export default function HomePage() {
           </Link>
         </div >
 
-        {/* ── Current Roles ── */}
-        < div className="md:col-span-3 card-neo" >
-          <h3 className="text-2xl font-black mb-6">Current Roles</h3>
-          <div className="grid md:grid-cols-2 gap-8">
-            {experience.map((exp, i) => (
-              <div key={i}>
-                <h4 className="text-xl font-bold mb-1">
-                  {'url' in exp && exp.url ? (
-                    <Link
-                      href={exp.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hover:underline font-bold"
-                    >
-                      {exp.org}
-                    </Link>
-                  ) : (
-                    exp.org
-                  )}
-                </h4>
-                <p className="font-bold text-sm uppercase tracking-wide opacity-75 mb-3">
-                  {exp.role}
-                </p>
-                <p className="text-sm leading-relaxed">{exp.description}</p>
-              </div>
-            ))
-            }
-          </div >
-        </div >
+        {/* ── Experience ── */}
+        <ExperienceSection className="md:col-span-3" showResume />
 
         {/* ── Stats Row: Stack / Projects / Hackathon ── */}
         {

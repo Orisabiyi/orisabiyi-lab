@@ -16,28 +16,53 @@ export const SITE = {
   },
 } as const;
 
-export const experience = [
+export type Experience = {
+  org: string;
+  url?: string;
+  role: string;
+  type?: string;
+  client?: string;
+  current?: boolean;
+  description: string;
+  highlights: string[];
+};
+
+export const experience: Experience[] = [
   {
     org: "Fez Delivery",
     url: "https://fezdelivery.co",
-    role: "Senior Frontend Engineer",
+    role: "Senior Software Engineer",
+    type: "Full-time",
+    current: true,
     description:
-      "Leading frontend architecture for a logistics platform serving businesses across Nigeria. Built a route optimization microservice with self-hosted OSRM and traffic-weighted heuristics.",
+      "Logistics platform serving businesses across Nigeria. Built a route optimization microservice on self-hosted OSRM tuned for Lagos traffic, a multi-layer address system, and payment integrations across consumer and B2B products.",
+    highlights: ["−30% order abandonment", "2× monthly orders", "+20–25% team velocity"],
   },
   {
-    org: "Common Chronicles",
-    url: "https://commonchronicles.live/",
-    role: "Founder & Builder",
+    org: "eCorpIT",
+    role: "Full-Stack Engineer",
+    type: "Full-time",
     description:
-      "A community for builders, creatives, and storytellers who make things and tell real stories. Built the content automation bot (Notion + Discord + Groq AI) and organized community events.",
+      "Shipped products across finance, healthcare, and payments in a lean team, owning frontend, backend services, and deployment.",
+    highlights: ["2M+ users", "API 10s → <1s", "−80% page load", "~50% lower dev costs"],
   },
   {
-    org: "Freelance / Contract",
-    role: "Fullstack Developer",
+    org: "Pitch Insight Consulting",
+    client: "Black Founder Network",
+    role: "Software Engineer / Consultant",
     description:
-      "Shipped products across e-commerce, fintech, and AI. Integrated 5 payment gateways (Paystack, OPay, Interswitch, Nomba, Stripe), built admin dashboards, and delivered client projects end-to-end.",
+      "Rebuilt the Black Founder Network platform from new Figma designs in Laravel and InertiaJS, with full accessibility and multi-language support.",
+    highlights: ["Ground-up rebuild", "WCAG compliant", "Multi-language"],
   },
-] as const;
+  {
+    org: "Global Banking and Finance",
+    role: "Full-Stack Engineer",
+    type: "Contract",
+    description:
+      "Rebuilt a high-traffic financial news platform, migrating it from WordPress to Next.js, Node.js, Sanity CMS, and MongoDB.",
+    highlights: ["Zero content loss", "+25% engagement", "−15% bounce rate", "99% Lighthouse"],
+  },
+];
 
 export const stats = [
   { number: "4+", label: "Years Shipping", href: "/about" },
