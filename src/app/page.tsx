@@ -6,6 +6,7 @@ import { SITE, stats, techStack } from "@/data/constants";
 import { projects } from "@/data/projects";
 import { Footer } from "@/components/footer";
 import { BlogCard } from "@/components/blog-card";
+import { JournalCard } from "@/components/journal-card";
 import { ExperienceSection } from "@/components/experience-section";
 
 const socials = [
@@ -119,6 +120,9 @@ export default function HomePage() {
             View All Projects
           </Link>
         </div >
+
+        {/* ── Journal (Substack) ── */}
+        <JournalCard />
 
         {/* ── Experience ── */}
         <ExperienceSection className="md:col-span-3" showResume />
